@@ -1,10 +1,16 @@
 import SideNav from './components/SideNav';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import HalamanLogin from './components/HalamanLogin';
 
 function App() {
   return (
-    <div>
-          <SideNav/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<HalamanLogin/>}/>
+        <Route path="/dasbord" element={<SideNav/>}/>
+      </Routes>
+    </BrowserRouter>
+    
   );
 }
 
