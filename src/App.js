@@ -1,4 +1,3 @@
-
 import logo from './logo.svg';
 import './App.css';
 import SideNav from './components/SideNav';
@@ -9,8 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HalamanLogin/>}/>
-        <Route path="/dasboard" element={<SideNav/>}/>
+        <Route path="/login" element={<HalamanLogin/>}/>
+        <Route path="/dasbord" element={<SideNav/>}/>
       </Routes>
     </BrowserRouter>
     

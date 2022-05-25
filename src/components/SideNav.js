@@ -1,4 +1,4 @@
-import { Nav } from "react-bootstrap";
+import { Nav, Button } from "react-bootstrap";
 import "../css/sidenav.css";
 import iconTokrum from "../image/icontokrum.png";
 import Dasboard from "./Dasboard";
@@ -11,7 +11,7 @@ function SideNav() {
           <div className="text-center icontokrum  d-flex justify-content-center align-items-center">
             <img src={iconTokrum} alt="icon"  />
           </div>
-          <div className="mt-4 navbtn ">
+          <div className="mt-4 navbtn d-flex flex-column justify-content-center">
             <Nav variant="pills" defaultActiveKey="#" className="flex-column">
               <Nav.Item className="activebtn">
                 <Nav.Link href="#" className="labelLink">
@@ -151,6 +151,9 @@ function SideNav() {
                 </Nav.Link>
               </Nav.Item>
             </Nav>
+            <div className="exit pb-3 d-flex align-items-end justify-content-center">
+              <Button className="button-Keluar">Keluar</Button>
+            </div>
           </div>
         </div>
 
