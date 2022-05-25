@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<HalamanLogin/>}/>
         <Route path="/dasbord" element={<SideNav/>}/>
-        <Route path="/verifikasi" element={<VerifikasiSeller/>}
+        <Route path="/verifikasi" element={<VerifikasiSeller/>}/>
       </Routes>
     </BrowserRouter>
     
