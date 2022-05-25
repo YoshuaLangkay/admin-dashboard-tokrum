@@ -544,7 +544,8 @@ function VerifikasiSeller(){
 
                 {formStep === 1 && (
                   <section>
-                                <h1 className="judulVerif">Verifikasi Seller</h1>
+
+<h1 className="judulVerif">Verifikasi Seller</h1>
 
 
                     <div className="tabsss d-flex">
@@ -687,8 +688,7 @@ function VerifikasiSeller(){
 
                 {formStep === 3 && (
                   <section>
-
-                  <h1 className="judulVerif">Verifikasi Seller</h1>
+            <h1 className="judulVerif">Verifikasi Seller</h1>
 
                     <div className="tabsss d-flex">
 
@@ -781,8 +781,7 @@ function VerifikasiSeller(){
                  {/* //BADAN USAHA// */}
                  {formStep === 4 && (
                   <section>
-
-<h1 className="judulVerif">Verifikasi Seller</h1>
+                                <h1 className="judulVerif">Verifikasi Seller</h1>
 
 
                   <div className="tabsss d-flex">
@@ -883,8 +882,7 @@ function VerifikasiSeller(){
 
                   {formStep === 5 && (
                   <section>
-
-<h1 className="judulVerif">Verifikasi Seller</h1>
+                                <h1 className="judulVerif">Verifikasi Seller</h1>
 
 
                   <div className="tabsss d-flex">
@@ -978,9 +976,6 @@ function VerifikasiSeller(){
                   {formStep === 6 && (
                   <section className="tlk" style={{marginLeft:'15px'}}>
 
-<h1 className="judulVerif">Verifikasi Seller</h1>
-
-
                   <div className="tabsss ms-4">
                   <h1 className="title-tolak" style={{color:'#3E4094' , fontSize:'26px', marginTop:'-40px' }}>Form Penolakan Verifikasi</h1>
 
@@ -992,7 +987,7 @@ function VerifikasiSeller(){
                   <h4 className="logo-warning text-center" style={{backgroundColor:'#FFC600', width:'30px',height:'30px', borderRadius:'20px',color:'#F89C47' }}>!</h4>
                   <p className='anda-menolak' style={{marginTop:'-120px', marginLeft:'10px'}}>Anda Menolak Verifikasi Seller</p> <br/>
                   </div>  
-                  <p className='untuk-kenyamanan' style={{marginTop:'-115px',width:'700px', marginLeft:'70px' , fontSize:'14px'}}>Untuk kenyamanan calon Seller, anda diharuskan mengisi keterangan penolakan verifikasi <br/> dengan memberikan alasan secara jelas alasan penolakan </p>
+                  <p className='untuk-kenyamanan' style={{marginTop:'-115px',width:'700px', marginLeft:'70px' , fontSize:'14px'}}>Untuk kenyamanan calon Seller, anda diharuskan mengisi keterangan penolakan verifikasi <br/>dengan memberikan alasan secara jelas alasan penolakan </p>
 
                   <h3 className="title" style={{marginTop:'30px', marginLeft:'5px'}}>keterangan</h3>
 
