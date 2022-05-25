@@ -47,7 +47,7 @@
 }
 .btnNotif{
     border-radius: 8px;
-    margin-top: -50px;
+    margin-top: -50px!important;
     width: 430px;
     height: 40px;
     background-color: #253863 !important;
