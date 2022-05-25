@@ -6,6 +6,20 @@
     margin-top: 6%;
     margin-left: 32%;
     padding: 50px;
+    
+
+    
+}
+body{
+    background-image: url('../image/Background.png');
+    background-color: #DEEAFD !important;
+    background-size: 80% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    
+
 }
 .logo{
     margin-top: 10px;
