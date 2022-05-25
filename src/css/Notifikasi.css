@@ -1,0 +1,104 @@
+.containerNotif{
+    width: 450px;
+    height: 400px;
+    margin-left: 851px;
+
+}
+.kotak{
+    background-color: white;
+    height: 480px;
+    border-radius: 8px;
+
+}
+.col1{
+    width: 340px;
+    margin-left: -10px;
+}
+.tanggalNotif{
+    font-size: 13px;
+    margin-left: -20px;
+    width: 100px;
+    color: #646464;
+    margin-top: 10px;
+
+}
+.rowIsi{
+    width: 415px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.isiNotif2{
+    width: 230px !important;
+    font-size: 13px;
+}
+.isiNotif{
+    width: 70px !important;
+    font-size: 14px;
+}
+
+.listNotif{
+    list-style-type: none;
+}
+.judulNotif{
+    font-family: Nunito-bold;
+    color: #253863;
+    font-size: 24px;
+    margin-left: 10px;
+}
+.btnNotif{
+    border-radius: 8px;
+    margin-top: -50px!important;
+    width: 430px;
+    height: 40px;
+    background-color: #253863 !important;
+    margin-bottom: 40px;
+    margin-left: 10px;
+}
+.exampleBtn{
+    margin-top: 20px;
+    margin-left: 250px;
+}
+.col2{
+    margin-left: 0px;
+    font-size: 14px;
+    margin-left: 30px;
+
+}
+.row1{
+    padding-top: 15px;
+    margin-top: 30px;
+    
+}
+.newNotif{
+    width: 74px;
+    height: 31px;
+    border-radius: 8px;
+    margin-left: 20px;
+    background-color: #FFF5DE;
+}
+.kananNotif{
+    margin-left: 30px;
+    margin-top: 5px;
+    
+}
+.new{
+    text-align: justify;
+    text-align-last: center;
+    margin-top: 4px;
+    font-size: 14px;
+    font-family: Nunito-bold;
+    color: #FF0000;
+}
+.tandai{
+    width: px;
+}
+
+@font-face {
+    font-family: "Nunito-reguler";
+    src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
+    }
+
+    @font-face {
+        font-family: "Nunito-bold";
+        src: url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
+        }
