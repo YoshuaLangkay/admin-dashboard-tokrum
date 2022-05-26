@@ -8,10 +8,15 @@ import linePolos from '../image/linePolos.png';
 import ceklis from '../image/ceklis.png';
 import iconX from '../image/Icon.png';
 import iconBerhasil from '../image/Ellipse 8.png'
-import bg from '../image/Background2.png'
+import bg from '../image/bg2.png'
+
+
+
 
 
 function VerifikasiSeller(){
+
+  
 
     
   //modal
@@ -347,13 +352,6 @@ function VerifikasiSeller(){
         <div className="body" style={{ backgroundColor: "grey"}}>
   
       <br />
-      
-      {/* <div className="modal-warning"> */}
-              {/* <Modal.Dialog hidden={modalShow}>
-            <img className="icon-warning" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/warning-symbol%2C-warning-sign-design-template-5becb2f6646d14a8076b36a92efb1db8.jpg?ts=1609018489" alt="warning"/><br/>
-            <h3 className="txt-header">{namaForm} harus diisi</h3>
-            </Modal.Dialog>
-              </div> */}
 
               <div className="popup-berhasil" hidden={hidenModal}>
               <Modal.Dialog>
@@ -381,7 +379,7 @@ function VerifikasiSeller(){
           <div
           >
 
-            <div className="form-user shadow p-3 mt-5 pb-5 bg-body  container">
+            <div className="form-user shadow  mt-5 pb-5 bg-body  container">
             
             
               <form>
@@ -396,7 +394,7 @@ function VerifikasiSeller(){
                     <div className="steps1 d-flex">
                       <div className="step-1">
                         <div className="container">
-                          <h5 className="kotak-nomor rounded pt-1 text-center pt-2 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}>1</h5>
+                          <h5 className="kotak-nomor rounded  text-center pt-2 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}>1</h5>
                           <h5 className="txt-on text-center" >Identitas Pemilik</h5>
                         </div>
                       </div>
@@ -493,7 +491,9 @@ function VerifikasiSeller(){
                       <div class="form-group col-md-5 ">
                         <label for="contoh2">Foto KTP</label>
                         <sup className="required" style={{ color: "red" }}>*</sup>
-                        <input style={{ backgroundColor: "#F0F4FA"}} type="text" class="form-control" id="contoh2" placeholder="Masukan Foto KTP" value={namaBelakang} onChange={changeNamaBelakang} required />
+                        
+                        
+                        <input style={{ backgroundColor: "#F0F4FA"}} type="file" class="form-control" id="contoh2" placeholder="Masukan Foto KTP" value={namaBelakang} onChange={changeNamaBelakang} required />
                       </div>
 
                     </div>
@@ -551,13 +551,15 @@ function VerifikasiSeller(){
 
                 {formStep === 1 && (
                   <section>
+                                <h1 className="judulVerif">Verifikasi Seller</h1>
+
 
                     <div className="tabsss d-flex">
 
                     <div className="steps1 d-flex">
                       <div className="step-1">
                         <div className="container">
-                          <h5 className="kotak-nomor rounded pt-1 ps-3 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                          <h5 className="kotak-nomor rounded text-secondary text-center pt-2 " style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE" , color:"#FAFAFC"}}>1</h5>
                           <h5 className="txt-on text-center" >Identitas Pemilik</h5>
                         </div>
                       </div>
@@ -683,7 +685,7 @@ function VerifikasiSeller(){
                     </div>
                   
                     <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-                      <button onClick={setelahStep2} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863" }}  type="submit">Selanjutnya</button>
+                      <button onClick={setelahStep2} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863",  }}  type="submit">Selanjutnya</button>
                     </div>
                   </section>
                 )}
@@ -693,12 +695,14 @@ function VerifikasiSeller(){
                 {formStep === 3 && (
                   <section>
 
+                  <h1 className="judulVerif">Verifikasi Seller</h1>
+
                     <div className="tabsss d-flex">
 
                     <div className="steps1 d-flex">
                       <div className="step-1">
                         <div className="container">
-                          <h5 className="kotak-nomor rounded pt-1 ps-3 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                          <h5 className="kotak-nomor rounded text-secondary text-center pt-2" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE" }}>1</h5>
                           <h5 className="txt-on text-center" >Identitas Pemilik</h5>
                         </div>
                       </div>
@@ -707,7 +711,7 @@ function VerifikasiSeller(){
 
                       <div className="steps2">
                         <div className="container">
-                          <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                          <h5 className=" kotak-nomor rounded text-secondary text-center pt-2" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>2</h5>
                           <h5 className="txt-judul  text-center text-secondary">Identitas Usaha</h5>
                         </div>
                       </div>
@@ -718,7 +722,7 @@ function VerifikasiSeller(){
 
                       <div className="steps3">
                         <div className="container">
-                        <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                        <h5 className="kotak-nomor rounded text-secondary text-center pt-2" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>3</h5>
                           <h5 className="txt-judul text-center  text-secondary">Legalitas & Izin Usaha</h5>
                         </div>
                       </div>
@@ -776,7 +780,7 @@ function VerifikasiSeller(){
                   </div>
 
                     <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-                      <button onClick={completeFormStep4} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863" }}  type="submit">Selanjutnya</button>
+                      <button onClick={completeFormStep4} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863", marginTop:'200px' }}  type="submit">Selanjutnya</button>
                     </div>
                   </section>
                 )}
@@ -785,12 +789,15 @@ function VerifikasiSeller(){
                  {formStep === 4 && (
                   <section>
 
+<h1 className="judulVerif">Verifikasi Seller</h1>
+
+
                   <div className="tabsss d-flex">
 
                   <div className="steps1 d-flex">
                     <div className="step-1">
                       <div className="container">
-                        <h5 className="kotak-nomor rounded pt-1 ps-3 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                        <h5 className="kotak-nomor rounded text-secondary text-center pt-2" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE" }}>1</h5>
                         <h5 className="txt-on text-center" >Identitas Pemilik</h5>
                       </div>
                     </div>
@@ -799,7 +806,7 @@ function VerifikasiSeller(){
 
                     <div className="steps2">
                       <div className="container">
-                        <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                        <h5 className="kotak-nomor rounded text-secondary text-center pt-2" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>2</h5>
                         <h5 className="txt-judul  text-center text-secondary">Identitas Usaha</h5>
                       </div>
                     </div>
@@ -810,7 +817,7 @@ function VerifikasiSeller(){
 
                     <div className="steps3">
                       <div className="container">
-                      <h5 className=" kotak-nomor rounded  text-center pt-2 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}>3</h5>
+                      <h5 className=" kotak-nomor rounded  text-center pt-2 " style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}>3</h5>
                         <h5 className="txt-judul text-center  text-secondary">Legalitas & Izin Usaha</h5>
                       </div>
                     </div>
@@ -819,7 +826,7 @@ function VerifikasiSeller(){
 
                     <div className="steps4">
                       <div className="container">
-                      <h5 className=" kotak-nomor rounded  pt-2 text-center shadow" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#8F90A6" }}>4</h5>
+                      <h5 className=" kotak-nomor rounded  pt-2 text-center " style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#8F90A6" }}>4</h5>
                         <h5 className="txt-judul text-center text-secondary">Nama & Rekening Bank</h5>
                       </div>
                     </div>
@@ -828,7 +835,7 @@ function VerifikasiSeller(){
 
                     <div className="steps5">
                       <div className="container">
-                      <h5 className=" kotak-nomor rounded  pt-2 text-center shadow" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#8F90A6" }}>5</h5>
+                      <h5 className=" kotak-nomor rounded  pt-2 text-center " style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#8F90A6" }}>5</h5>
                         <h5 className="txt-judul text-center ms-3 text-secondary">Brand</h5>
                       </div>
                     </div>
@@ -870,13 +877,12 @@ function VerifikasiSeller(){
                       <div class="col-4 d-flex justify-content-start ms-5 ps-3">
                         <button onClick={backFormStep4} class="btn text-light" style={{ width: "30%", backgroundColor: "#f16e60" }} type="button">Kembali</button>
                       </div>
-
                       <div class="col-7 d-flex justify-content-end ms-1 ps-1 pe-3" style={{ left: "30px" }}>
                         <button onClick={completeFormStep4} class="btn text-light" style={{ width: "20%", backgroundColor: "#f16e60" }} type="submit">Lanjut</button>
                       </div>
                     </div> */}
                     <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-                      <button onClick={completeFormStep2} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863" }}  type="submit">Selanjutnya</button>
+                      <button onClick={completeFormStep2} class="btn text-light" style={{ width: "150px",height:"44px", backgroundColor: "#253863", marginTop:'195px' }}  type="submit">Selanjutnya</button>
                     </div>
                   </section>
                 )}
@@ -884,12 +890,15 @@ function VerifikasiSeller(){
                   {formStep === 5 && (
                   <section>
 
+<h1 className="judulVerif">Verifikasi Seller</h1>
+
+
                   <div className="tabsss d-flex">
 
                   <div className="steps1 d-flex">
                     <div className="step-1">
                       <div className="container">
-                        <h5 className="kotak-nomor rounded pt-1 ps-3 text-light shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                        <h5 className="kotak-nomor rounded text-secondary  pt-2 text-center" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE" }}>1</h5>
                         <h5 className="txt-on text-center" >Identitas Pemilik</h5>
                       </div>
                     </div>
@@ -898,7 +907,7 @@ function VerifikasiSeller(){
 
                     <div className="steps2">
                       <div className="container">
-                        <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                        <h5 className="kotak-nomor rounded text-secondary  pt-2 text-center" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>2</h5>
                         <h5 className="txt-judul  text-center text-secondary">Identitas Usaha</h5>
                       </div>
                     </div>
@@ -909,7 +918,7 @@ function VerifikasiSeller(){
 
                     <div className="steps3">
                       <div className="container">
-                      <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                      <h5 className="kotak-nomor rounded text-secondary pt-2 text-center" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>3</h5>
                         <h5 className="txt-judul text-center  text-secondary">Legalitas & Izin Usaha</h5>
                       </div>
                     </div>
@@ -918,7 +927,7 @@ function VerifikasiSeller(){
 
                     <div className="steps4">
                       <div className="container">
-                      <h5 className=" kotak-nomor rounded  pt-1 ps-3 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}><img className="ceklis" src={ceklis} alt="ceklis"></img></h5>
+                      <h5 className="kotak-nomor rounded text-secondary pt-2 text-center" style={{ width: "40px", height: "40px", backgroundColor: "#EEEEEE", color:"#FAFAFC" }}>4</h5>
                         <h5 className="txt-judul text-center text-secondary">Nama & Rekening Bank</h5>
                       </div>
                     </div>
@@ -966,27 +975,27 @@ function VerifikasiSeller(){
                   </div>
 
                     <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-                      <button onClick={completeFormStepLast} class="btn text-light me-2" style={{ width: "150px",height:"44px", backgroundColor: "#253863" }} type="submit">Verifikasi Seller</button>
-                      <button onClick={completeFormStepTolak} class="btn text-danger" style={{ width: "100px",height:"44px", backgroundColor: "white", borderColor:'red' }} type="submit">Tolak</button>
+                      <button onClick={completeFormStepLast} class="btn text-light me-2" style={{ width: "150px",height:"44px", backgroundColor: "#253863", marginTop:'195px' }} type="submit">Verifikasi Seller</button>
+                      <button onClick={completeFormStepTolak} class="btn text-danger" style={{ width: "100px",height:"44px", backgroundColor: "white", borderColor:'red',marginTop:'195px' }} type="submit">Tolak</button>
                     </div>
                   </section>
                 )}
 
                   {formStep === 6 && (
-                  <section>
+                  <section className="tlk" style={{marginLeft:'15px'}}>
 
                   <div className="tabsss ms-4">
-                  <h1 className="title-tolak" style={{color:'#3E4094'}}>Form Penolakan Verifikasi</h1>
+                  <h1 className="title-tolak" style={{color:'#3E4094' , fontSize:'26px', marginTop:'-40px' }}>Form Penolakan Verifikasi</h1>
 
                   <div>
                   <img src={bg} alt='background' className="bg" />
                   </div>
 
                   <div className='kotak-warning d-flex'>
-                  <h4 className="logo-warning text-center" style={{backgroundColor:'white', width:'30px',height:'30px', borderRadius:'20px',color:'#F89C47' }}>!</h4>
+                  <h4 className="logo-warning text-center" style={{backgroundColor:'#FFC600', width:'30px',height:'30px', borderRadius:'20px',color:'#F89C47' }}>!</h4>
                   <p className='anda-menolak' style={{marginTop:'-120px', marginLeft:'10px'}}>Anda Menolak Verifikasi Seller</p> <br/>
                   </div>  
-                  <p className='untuk-kenyamanan' style={{marginTop:'-115px',width:'700px', marginLeft:'70px'}}>Untuk kenyamanan calon Seller, anda diharuskan mengisi keterangan penolakan verifikasi dengan memberikan alasan secara jelas alasan penolakan </p>
+                  <p className='untuk-kenyamanan' style={{marginTop:'-115px',width:'700px', marginLeft:'70px' , fontSize:'14px'}}>Untuk kenyamanan calon Seller, anda diharuskan mengisi keterangan penolakan verifikasi <br/> dengan memberikan alasan secara jelas alasan penolakan </p>
 
                   <h3 className="title" style={{marginTop:'30px', marginLeft:'5px'}}>keterangan</h3>
 
@@ -997,8 +1006,8 @@ function VerifikasiSeller(){
                   </div>
 
                   <div class="col-12 mt-4 d-flex justify-content-end pe-5">
-                      <button onClick={completeFormStep4} class="btn text-light me-2" style={{ width: "150px",height:"44px", backgroundColor: "#253863" }} type="submit">Kembali</button>
-                      <button onClick={completeFormStepTolak2} class="btn text-danger" style={{ width: "100px",height:"44px", backgroundColor: "white", borderColor:'red' }} type="submit">Tolak</button>
+                      <button onClick={completeFormStep4} class="btn text-light me-2" style={{ width: "150px",height:"44px", backgroundColor: "#253863",marginTop:'145px' }} type="submit">Kembali</button>
+                      <button onClick={completeFormStepTolak2} class="btn text-danger" style={{ width: "100px",height:"44px", backgroundColor: "white", borderColor:'red', marginTop:'145px' }} type="submit">Tolak</button>
                     </div>
                     
                   </section>
@@ -1016,5 +1025,7 @@ function VerifikasiSeller(){
     </div>
     )
 }
+
+
 
 export default VerifikasiSeller
