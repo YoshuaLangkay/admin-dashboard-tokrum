@@ -1,0 +1,83 @@
+@font-face {
+    font-family: "Nunoito400";
+    src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+    font-family: 'Nunito600';
+      src: url("../font/NunitoSans_SemiBold.ttf");
+  }
+.dasboard {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f1f5fc;
+}
+
+.side-nav {
+  background-color: #FFFFFF  ;
+  width: 14vw;
+  height: 99.5vh;
+  width: 14vw;
+}
+.side-nav img{
+  width: 12vw;
+}
+
+.icontokrum{
+    height: 13.7vh;
+    border-bottom: 2px solid #E5ECFC;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.navbtn {
+  width: 12vw;
+  margin: 0 auto;
+}
+
+.labelIcon {
+  font-size: 1rem;
+  line-height: 21.82px;
+  font-weight: 400;
+}
+
+.activebtn .active {
+  background-color: #253863 !important;
+  height: 48px !important  ;
+  color: white !important;
+  border-radius: 8px !important;
+  font-family:"Nunito600" !important ;
+  width: 12vw;
+}
+
+.activebtn {
+  height: 48px !important;
+  border-radius: 8px !important;
+  width: 12vw;
+
+}
+.labelLink {
+  color: #b6c7ee !important;
+  font-family: "Nunoito400";
+}
+
+.exit{
+  height: 30vh;
+  width: 12vw;
+}
+.button-Keluar{
+  width: 12vw !important;
+  height: 42px !important  ;
+  background-color: #FFCCCC !important;
+  color: #FF0000 !important;
+  border: none !important;
+  font-family: "Nunoito400" !important;
+  font-size: 16px !important;
+
+}
+
+/* content */
+.content{
+    width: 86vw;
+    height: 80vh;
+}
+

@@ -1,0 +1,211 @@
+@font-face {
+    font-family: "Nunito-400";
+    src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+    font-family: "Nunito-800";
+    src: url("../font/NunitoSans_ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Nunito-600";
+    src: url("../font/NunitoSans_SemiBold.ttf");
+}
+
+.isiContent{
+    width: 86vw;
+    height: 99.5vh;
+}
+
+.profile{
+    height: 14vh !important;
+    border-bottom: 2px solid #E5ECFC;
+    margin-left: 8px;
+}
+
+.iconNotif{
+    transform: rotate(180deg);
+}
+
+.namaProfile{
+    color: #253863;
+    font-size: 16px;
+    font-family:"Nunito600" ;
+    font-weight: 600;
+}
+.titleJob{
+    color:#909090;
+    font-size: 14px;
+}
+
+.foto{
+    width: 43.2px;
+    height: 44px;
+    border-radius: 4px;
+}
+
+.dataContent{
+    width: 83vw;
+    height: 85vh;
+    margin: 0 auto;
+}
+
+.contentLeft{
+    width: 56vw;
+    height: 80vh;
+}
+
+.tableUser{
+    width: 54vw;
+    height: 48vh;
+}
+.isiTable{
+    width: 52vw;
+    height: 41.5vh;
+}
+.zui-table{
+    width: 52vw !important;
+    height: 40vh !important;
+}
+.zui-table-rounded thead th {
+    background-color: #FBFBFB;
+    border: none;
+    font-family: "Nunito-400" ;
+    color: #0A0A0A    ;
+    font-weight: 400;
+    font-size: 0.9vw;
+    border-bottom: 2px solid #e8e5e5   ;
+
+}
+.zui-table-rounded tbody td {
+    font-family: "Nunito-400" ;
+    color: #404040    ;
+    font-size: 0.75vw;
+    border-bottom: 0.75px solid #e8e5e5  ;
+    background-color: #ffffff;
+}
+.zui-table-rounded thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+.zui-table-rounded thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+.zui-table-rounded tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+.zui-table-rounded tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+.status{
+    color: #734011    ;
+    background-color: #FFF9F2 ;
+}
+.status1{
+    color: #379734
+    ;
+    background-color: #D5FBD5
+    ;
+}
+.status2{
+    color: #CB3A31    ;
+    background-color: #FFF4F2    ;
+}
+.action a{
+    color: #253863 ;
+}
+
+
+.paginationTableBox{
+    width: 52vw;
+    height: 8vh;
+}
+
+.page-link{
+    border: none !important;
+    background-color: #ffffff00 !important;
+    color: #3E4094 !important ;
+    font-size: 1vw !important;
+}
+
+
+
+.contentRight{
+    width: 23vw;
+    height: 80vh;
+}
+
+.transaksi{
+    width: 25vw;
+    height: 15vh;
+    background-color: white;
+    border-radius: 8px ;
+}
+
+.box_user{
+    width: 16vw;
+    height: 17vh;
+    background-color: white;
+    border-radius: 8px ;
+    
+}
+
+.box_terlaris{
+    width: 22vw;
+    height: 40vh;
+    background-color: #ffffff;
+    border-radius: 10px  ;
+}
+.list_produk_terlaris {
+    width: 20vw;
+    height: 10vh;
+}
+
+
+.labelTerlaris {
+    border-bottom: 1px solid #E5ECFC;
+    margin: 15px;
+}
+
+.productImg img{
+    width: 3vw;
+    border-radius: 10px;
+}
+.labelNameProduk{
+    width: 12vw;
+}
+.namaProdukTerlaris{
+    font-size: 1vw;
+    font-family: "Nunito-600";
+}
+.hargaProdukTerlaris{
+    font-size: 1.3vw;
+    font-family: "Nunito-800";
+}
+.hintProdukTerlaris{
+    font-size: 0.7vw;
+    font-family: "Nunito-400";
+    color: #BFBFDB ;
+}
+
+.label_name_box {
+    font-family:"Nunito";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.55px    ;
+}
+.label_jumlah_box{
+    font-family: "Nunito-800";
+    font-size: 24px;
+    line-height: 32.74px;
+    color: #000000
+;}
+
+.hint_box{
+    font-family: "Nunito";
+    color: #ABABAB  ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.1px    ;
+
+    
+}
