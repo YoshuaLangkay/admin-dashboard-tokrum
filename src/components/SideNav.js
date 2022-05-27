@@ -2,6 +2,7 @@ import { Nav, Button } from "react-bootstrap";
 import "../css/sidenav.css";
 import iconTokrum from "../image/icontokrum.png";
 import Dasboard from "./Dasboard";
+import VerifikasiSeller from "./VerifikasiSeller";
 
 function SideNav() {
   return (
@@ -160,7 +161,7 @@ function SideNav() {
         {/* SIDE NAV */}
 
         <div className="content">
-          <Dasboard/>
+          <VerifikasiSeller/>
           
         </div>
       </div>

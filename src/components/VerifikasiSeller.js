@@ -930,7 +930,7 @@ function VerifikasiSeller(){
                       <div className="container">
                       <h5 className=" kotak-nomor rounded  text-center pt-2 shadow" style={{ width: "40px", height: "40px", backgroundColor: "#5979C0", color:"#FAFAFC" }}>5</h5>
                         <h5 className="txt-judul text-center ms-3 text-secondary">Brand</h5>
-                      </div>
+                    </div>
                     </div>
 
                     </div>

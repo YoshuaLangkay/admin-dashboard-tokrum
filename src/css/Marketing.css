@@ -1,0 +1,56 @@
+.isiMarketing{
+    background-color: white;
+    border-radius: 8px;
+}
+.profile{
+    margin-top: -50%;
+}
+.title{
+    font-size: 25px;
+    color: #253863;
+    margin-top: 1%;
+    margin-left: 15px;
+    width: 200px;
+}
+.section{
+    margin-left: 15px;
+    width: 100%;
+}
+.search-box::placeholder {
+    background-color: #F5F8FA;
+    font-size: 16px;
+    font-style: italic;
+}
+.kananJudul{
+    margin-left: 440px;
+}
+.table{    
+    margin-top: 0px;
+    width: 100%;
+}
+th{
+    text-align:center;
+    font-size: 14px;
+    height: 40px;
+}
+td{
+    text-align: center;
+    font-size: 13px;   
+    height: 20px;
+    border: #F5F8FA;
+}
+tr{
+    text-align: justify;
+}
+table{
+    width: 100%;
+    padding: 10px;
+}
+.app{
+    width: 100%;
+}
+.nomorPage{
+    font-style: bold;
+    color: black !important;
+}
+

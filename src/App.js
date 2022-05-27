@@ -5,6 +5,7 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import HalamanLogin from './components/HalamanLogin';
 import Notifikasi from './components/Notifikasi';
 import VerifikasiSeller from './components/VerifikasiSeller';
+import Marketing from './components/Marketing';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HalamanLogin/>}/>
         <Route path="/dasboard" element={<SideNav/>}/>
         <Route path="/verifikasi" element={<VerifikasiSeller/>}/>
+        <Route path='/marketing' element={<Marketing />} />
       </Routes>
     </BrowserRouter>
     
