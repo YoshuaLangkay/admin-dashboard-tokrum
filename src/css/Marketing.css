@@ -5,12 +5,35 @@
 .profile{
     margin-top: -50%;
 }
+.Mselengkapnya{
+    border: 2px solid #253863;
+    color: #253863;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .title{
     font-size: 25px;
     color: #253863;
     margin-top: 1%;
     margin-left: 15px;
     width: 200px;
+}
+
+.item-tab{
+    font-size: 18px;
+    margin-left: 10px;
+    color: #BFBFDB;   
+}
+input[type='checkbox']:checked:after {
+    background-color: red;
+  }
+.MjudulTable{
+    color: #353535;
+    font-family: th;
 }
 .section{
     margin-left: 15px;
@@ -21,11 +44,14 @@
     font-size: 16px;
     font-style: italic;
 }
+.tabs{
+margin-bottom: 20px;
+}
 .kananJudul{
     margin-left: 440px;
 }
 .table{    
-    margin-top: 0px;
+    margin-top: 10px;
     width: 100%;
 }
 th{
@@ -46,11 +72,28 @@ table{
     width: 100%;
     padding: 10px;
 }
+.kiriKanan{
+    border: 2px solid #BFBFDB ;
+    border-color: #BFBFDB;
+    border-radius: 20px;
+}
 .app{
     width: 100%;
 }
 .nomorPage{
     font-style: bold;
-    color: black !important;
+}
+.MisiTable{
+    font-family: nunito-sans;
+    color: #646464;
+    font-size:13px;
+}
+@font-face {
+    font-family: th;
+    src: url('../font/NunitoSans_SemiBold.ttf');
+}
+@font-face {
+    font-family: nunito-sans;
+    src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
 }
 

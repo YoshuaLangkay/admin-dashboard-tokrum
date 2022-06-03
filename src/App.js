@@ -6,6 +6,7 @@ import HalamanLogin from './components/HalamanLogin';
 import Notifikasi from './components/Notifikasi';
 import VerifikasiSeller from './components/VerifikasiSeller';
 import Marketing from './components/Marketing';
+import Voucher from './components/Voucher';
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
         <Route path="/" element={<HalamanLogin/>}/>
         <Route path="/dasboard" element={<SideNav/>}/>
         <Route path="/verifikasi" element={<VerifikasiSeller/>}/>
-        <Route path='/marketing' element={<Marketing />} />
+        <Route path='/adsbanner' element={<Marketing />} />
+        <Route path='/voucher' element={<Voucher />} />
+
       </Routes>
     </BrowserRouter>
     

@@ -1,13 +1,81 @@
 import SideNav from "./SideNav";
 import '../css/Marketing.css'
 import {Button, FormControl, Form, Nav,Table, Pagination} from 'react-bootstrap'
-import React from "react";
+import React, { useState, useEffect } from "react";
 import iklan from '../image/iklan.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function Marketing(){
+
+    const [hideHapus, setHideHapus] = useState(true)
+    const [cekAll, setCekAll] = useState(false)
+    const [isCheck, setIsCheck] = useState([]);
+    const [isCheckAll, setIsCheckAll] = useState(false);
+
+    function hideHapusBtn(){
+
+        for(let i = 0; i <= data.length; i++){
+            if(hideHapus == true ){
+                setHideHapus(false)
+            }
+            else{
+                setHideHapus(true)
+            }
+        }
+        
+    }
+    const handleClick = e => {
+        const { id, checked } = e.target;
+        setIsCheck([...isCheck, id]);
+        setHideHapus(false)
+        let elem = document.getElementById(id)
+        elem.style.backgroundColor = '#F1F5FC'
+
+        for(let i = 0 ; i>id.length; i++){
+            if(checked){
+                setHideHapus(true)
+            }else{
+                setHideHapus(false)
+            }
+
+        }
+        
+        if (!checked > 1) {
+          setIsCheck(isCheck.filter(item => item !== id));
+          setHideHapus(false)
+          elem.style.backgroundColor = '#F1F5FC'
+        }if(checked.length == 0 ){
+        setIsCheck(isCheck.filter(item => item !== id));
+          setHideHapus(false)
+          elem.style.backgroundColor = '#F1F5FC'
+        }if(checked >= 1) {
+            setIsCheck(isCheck.filter(item => item !== id));
+            setHideHapus(false)
+            elem.style.backgroundColor = '#F1F5FC'
+        }if(checked == 1){
+            setHideHapus(false)
+            elem.style.backgroundColor = '#F1F5FC'
+        }
+        else{
+            setIsCheck(isCheck.filter(item => item !== id));
+            setHideHapus(true)
+            elem.style.backgroundColor = 'white'
+        }
+      };
+
+    function checkAll(){
+            setCekAll(true)
+            setIsCheck(data.map(li => li.id));
+            if (cekAll) {
+            setIsCheck([]);
+            setCekAll(false)
+            setHideHapus(true)
+            }else{
+                setHideHapus(false)
+            }
+        }
 
     let data = [{ id: 1, namaIklan: 'Iklan Brand Mantap', tanggalMulai: '25 Mei 2020', tanggalSelesai: '25 Mei 2020', kategori:'Iklan Produk' }, 
                 { id: 2, namaIklan: 'Iklan Brand Mantap', tanggalMulai: '25 Mei 2020', tanggalSelesai: '25 Mei 2020', kategori:'Iklan Produk' }, 
@@ -83,23 +151,23 @@ function Marketing(){
                     </Form>
                     </div>
 
-                    <div className="section d-flex">
-                    <Nav variant="tabs" defaultActiveKey="/home" className="d-flex">
-                        <Nav.Item>
-                            <Nav.Link href="#">Section 1</Nav.Link>
+                    <div className="section d-flex ">
+                    <Nav variant="tabs" defaultActiveKey="section1" className="d-flex ">
+                        <Nav.Item className="border-0" >
+                            <Nav.Link  type="checkbox" className="item-tab border-bottom mb-3" href="#" eventKey="section1" title="section1">Section 1</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item >
+                            <Nav.Link className="item-tab border-bottom" eventKey="link-1" >Section 2</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-1">Section 2</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="disabled" >
+                            <Nav.Link className="item-tab border-bottom" eventKey="disabled" >
                             Section 3
                             </Nav.Link>
                         </Nav.Item>
                         
                         </Nav>
 
-                        <Button style={{backgroundColor:'white', width:'150px', height:'40px',marginBottom:'10px', marginLeft:'670px', color:'red', borderColor:'red'}}>Hapus Banner</Button>
+                        <Button hidden={hideHapus} style={{backgroundColor:'white', width:'150px', height:'40px',marginBottom:'10px', marginLeft:'-180px', color:'red', borderColor:'red'}}>Hapus Banner</Button>
 
 
                     </div>
@@ -109,12 +177,12 @@ function Marketing(){
                             <table class="table table-hover ">
                                 <thead >
                                 <tr style={{backgroundColor:'#FBFBFB'}}>
-                                    <th scope="col"><Form.Check aria-label="option 1" style={{align:'center'}} /></th>
-                                    <th scope="col">Asset</th>
-                                    <th scope="col">Nama Iklan</th>
-                                    <th scope="col">Tanggal Mulai</th>
-                                    <th scope="col">Tanggal Selesai</th>
-                                    <th scope="col">Kategori</th>
+                                    <th scope="col" ><Form.Check handleClick={checkAll} isChecked={isCheckAll} aria-label="option 1" onClick={checkAll} style={{align:'center'}} /></th>
+                                    <th className="MjudulTable"  scope="col">Asset</th>
+                                    <th className="MjudulTable"  scope="col">Nama Iklan</th>
+                                    <th className="MjudulTable"  scope="col">Tanggal Mulai</th>
+                                    <th className="MjudulTable"  scope="col">Tanggal Selesai</th>
+                                    <th className="MjudulTable"  scope="col">Kategori</th>
                                     <th scope="col"></th>
 
                                 </tr>
@@ -123,14 +191,14 @@ function Marketing(){
                                 {data.map(function({id, namaIklan, tanggalMulai, tanggalSelesai, kategori}){
                                 
                                     return (
-                                        <tr>
-                                        <td>{<Form.Check aria-label="option 1" style={{align:'center'}} />}</td>
+                                        <tr id={id}>
+                                        <td  >{<Form.Check aria-label="option 1" className="cekbox" type="checkbox" onClick={handleClick} id={id} name="foo" style={{align:'center', paddingTop:'10px', color:'#253863'}} />}</td>
                                         <td><img src={iklan} alt="iklan" width={'90px'}/></td>
-                                        <td>{namaIklan}</td>
-                                        <td>{tanggalMulai}</td>
-                                        <td>{tanggalSelesai}</td>
-                                        <td>{kategori}</td>
-                                        <td><a href="#">Lihat Detail</a></td>
+                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{namaIklan}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{tanggalMulai}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{tanggalSelesai}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{kategori}</td>
+                                        <td  style={{paddingTop:'15px'}}><a href="#" className="Mselengkapnya">Selengkapnya</a></td>
                                         </tr>
                                         );
                                     })}
@@ -141,13 +209,13 @@ function Marketing(){
                             </div>
 
                             <Pagination style={{marginLeft:'40%', marginTop:'-10px'}}>
-                                <Pagination.Prev className="bordered" style={{backgroundColor:'white', borderRadius:'15px', height:'30px', borderColor:'#BFBFDB'}} />
-                                <Pagination.Item className="nomorPage">{1}</Pagination.Item>
-                                <Pagination.Item>{2}</Pagination.Item>
-                                <Pagination.Item>{3}</Pagination.Item>
+                                <Pagination.Prev className="kiriKanan" style={{height:'30px'}} />
+                                <Pagination.Item className="nomorPage" style={{color:'#253863'}}>{1}</Pagination.Item>
+                                <Pagination.Item className="nomorPage">{2}</Pagination.Item>
+                                <Pagination.Item className="nomorPage">{3}</Pagination.Item>
                                 <Pagination.Ellipsis />
-                                <Pagination.Item>{32}</Pagination.Item>
-                                <Pagination.Next />
+                                <Pagination.Item className="nomorPage">{32}</Pagination.Item>
+                                <Pagination.Next className="kiriKanan" style={{height:'30px'}} />
                                 </Pagination>
 
                 </div>

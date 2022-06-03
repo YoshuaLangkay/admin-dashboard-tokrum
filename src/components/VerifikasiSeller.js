@@ -348,14 +348,7 @@ function VerifikasiSeller(){
   
       <br />
 
-              <div className="popup-berhasil" hidden={hidenModal}>
-              <Modal.Dialog>
-                <Modal.Body>
-                  <img src={iconBerhasil} alt='berhasil' className="icon-berhasil"/>
-                  <p className="text-berhasil">Seller Berhasil Diverifikasi</p>
-                </Modal.Body>
-              </Modal.Dialog>
-              </div>
+              
 
               <div className="popup-berhasil" hidden={hidenModalTolak}>
               <Modal.Dialog>
