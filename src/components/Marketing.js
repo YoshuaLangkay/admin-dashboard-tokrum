@@ -17,6 +17,7 @@ function Marketing(){
     const [isCheckAll, setIsCheckAll] = useState(false);
     const [x, setX] = useState(true);
     const [hideModalTambahV, setHideModalTambahV] = useState(true);
+    const [hideBg, setHideBg] = useState(true)
 
 
 
@@ -25,6 +26,7 @@ function Marketing(){
         if(hideModalTambahV == true){
             setHideModalTambahV(false)
             setX(false)
+            setHideBg(false)
         }
     }
 
@@ -96,6 +98,8 @@ function Marketing(){
             }else{
                 setX(true)
                 setHideModalTambahV(true)
+                setHideBg(true)
+
             }
         }
 
@@ -110,6 +114,7 @@ function Marketing(){
     return(
 
         <>
+        <div className="bgModal" style={{backgroundColor:'red',width:'100%', height:'100%'}} hidden={hideBg}>
         <div className="modal-tambahB" hidden={hideModalTambahV}>
         <img src={iconX} onClick={xHide} hidden={x} className="iconXB" />
 
@@ -163,7 +168,7 @@ function Marketing(){
             </Row>
             <Row>
                 <Form.Group>
-                <Form.Label className="form-label">Pilih Produk/Merchant</Form.Label>
+                <Form.Label className="form-label">Section Banner</Form.Label>
                     <Form.Select  aria-label="Default select example" style={{width:'100%', marginTop:'0px', backgroundColor:'#F7F7F7'}}>
                         <option>Pilih Jenis Voucher</option>
                         <option value="1">One</option>
@@ -190,6 +195,10 @@ function Marketing(){
 
             <Button onClick={tambahPromo} style={{backgroundColor:'#253863', width:'150px', height:'40px',marginTop:'10px', marginLeft:'79%'}}>Tambah Banner</Button>
               </div>
+              </div>
+
+
+
         <SideNav/>
         
         <div className="profile d-flex align-items-center  d-flex justify-content-end " style={{height:'50px'}}>
@@ -313,7 +322,7 @@ function Marketing(){
                                     
                             </div>
 
-                            <Pagination style={{marginLeft:'40%', marginTop:'-10px'}}>
+                            <Pagination style={{marginLeft:'35%', marginTop:'-10px'}}>
                                 <Pagination.Prev className="kiriKanan" style={{height:'30px', paddingTop:'0px'}} />
                                 <Pagination.Item className="nomorPage" style={{color:'#253863'}}>{1}</Pagination.Item>
                                 <Pagination.Item className="nomorPage">{2}</Pagination.Item>

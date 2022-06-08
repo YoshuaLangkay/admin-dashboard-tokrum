@@ -353,11 +353,11 @@ function Voucher(){
                                 <thead >
                                 <tr style={{backgroundColor:'#FBFBFB'}}>
                                     <th scope="col" ><Form.Check handleClick={checkAll} isChecked={isCheckAll} aria-label="option 1" onClick={checkAll} style={{align:'center'}} /></th>
-                                    <th className="MjudulTable"  scope="col">Nama Voucher</th>
-                                    <th className="MjudulTable"  scope="col">Jenis Voucher</th>
-                                    <th className="MjudulTable"  scope="col">Penanggung Jawab</th>
-                                    <th className="MjudulTable"  scope="col">Tanggal Aktif</th>
-                                    <th className="MjudulTable"  scope="col">Tanggal Selesai</th>
+                                    <th className="MjudulTable" style={{textAlign:'left'}}  scope="col">Nama Voucher</th>
+                                    <th className="MjudulTable"  style={{textAlign:'left'}}  scope="col">Jenis Voucher</th>
+                                    <th className="MjudulTable" style={{textAlign:'left'}}  scope="col">Penanggung Jawab</th>
+                                    <th className="MjudulTable" style={{textAlign:'left'}}  scope="col">Tanggal Aktif</th>
+                                    <th className="MjudulTable" style={{textAlign:'left'}}  scope="col">Tanggal Selesai</th>
                                     <th scope="col"></th>
 
                                 </tr>
@@ -368,11 +368,11 @@ function Voucher(){
                                     return (
                                         <tr id={id}>
                                         <td  >{<Form.Check aria-label="option 1" className="cekbox" type="checkbox" onClick={handleClick} id={id} name="foo" style={{align:'center', paddingTop:'10px', color:'#253863'}} />}</td>
-                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{namaVoucher}</td>
-                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{jenisVoucher}</td>
-                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{penanggungJawab}</td>
-                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{tanggalAktif}</td>
-                                        <td className="MisiTable" style={{paddingTop:'15px'}}>{tanggalSelesai}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px', textAlign:'left'}}>{namaVoucher}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px', textAlign:'left'}}>{jenisVoucher}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px', textAlign:'left'}}>{penanggungJawab}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px', textAlign:'left'}}>{tanggalAktif}</td>
+                                        <td className="MisiTable" style={{paddingTop:'15px', textAlign:'left'}}>{tanggalSelesai}</td>
 
                                         <td  style={{paddingTop:'15px'}}><a href="#" className="Mselengkapnya">Selengkapnya</a></td>
                                         </tr>
@@ -384,7 +384,7 @@ function Voucher(){
                                     
                             </div>
 
-                            <Pagination style={{marginLeft:'40%', marginTop:'-10px'}}>
+                            <Pagination style={{marginLeft:'35%', marginTop:'-10px'}}>
                                 <Pagination.Prev className="kiriKanan" style={{height:'30px'}} />
                                 <Pagination.Item className="nomorPage" style={{color:'#253863'}}>{1}</Pagination.Item>
                                 <Pagination.Item className="nomorPage">{2}</Pagination.Item>

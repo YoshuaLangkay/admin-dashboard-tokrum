@@ -96,7 +96,18 @@
     cursor: pointer;
   }
   /* cekbox */
-
+  th, td{
+    font-family: nunito-sans !important;
+    text-align: left !important;
+}
+  .bgModal{
+      background-color: #353535
+      !important;
+      width: 100%;
+      height: 100%;
+      z-index: 10000 !important;  
+      position: fixed;
+  }
 .tabz{
     border-color: white;
     margin-bottom: -30px;
@@ -140,7 +151,7 @@
 .modal-tambahB{
     width: 50%;
     background-color: white;
-    z-index: 10000 !important;  
+    z-index: 10001 !important;  
     margin-left: 25%;
     position: fixed;
     margin-top: 1%;
@@ -148,7 +159,31 @@
     padding: 20px;
     height: 95%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+
 }
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
+  @-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+  }
+
 .Mselengkapnya{
     border: 2px solid #253863;
     color: #253863;
@@ -235,7 +270,9 @@ table{
     width: 100%;
 }
 .nomorPage{
-    font-style: bold;
+    font-family: nunito-sans !important;
+    color: #253863 !important;
+    margin-left: 20px;
 }
 .MisiTable{
     font-family: nunito-sans;
