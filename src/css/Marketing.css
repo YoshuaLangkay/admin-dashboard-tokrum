@@ -36,11 +36,27 @@
     font-weight: 400;
     font-family: nunito-sans;
     font-size: 14px;
+    margin-top: -10px;
+    z-index: 200000000 !important;
     margin: 10px;
     color: black;
   }
   .border-container a{
       color: #253863;
+  }
+
+  /**/
+  .inputFoto{
+      margin-bottom: -20px;
+      opacity: 0.5;
+      position: fixed;
+      margin-top: 20px;
+      margin-left: 220px;
+      margin-top: 20px;
+      width: 260px;
+      height: 80px;
+      background-color: red;
+    opacity: -1;
   }
 /* upload gambar */
 
@@ -64,6 +80,23 @@
     font-size: 16px;
     font-weight: bold;
 }
+/* cekbox */
+.cekbox > input:checked {
+    background-color: #253863;
+}
+.cekbox > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #C2C2C2;
+    border-radius: 4px;
+    outline: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+  }
+  /* cekbox */
+
 .tabz{
     border-color: white;
     margin-bottom: -30px;
@@ -153,8 +186,10 @@ input[type='checkbox']:checked:after {
 }
 .search-box::placeholder {
     background-color: #F5F8FA;
-    font-size: 16px;
-    font-style: italic;
+    font-size: 13px;
+    font-family: nunito-sans;
+    color: #B1B1B1;
+    
 }
 .tabs{
 margin-bottom: 20px;
@@ -177,6 +212,10 @@ td{
     height: 20px;
     border: #F5F8FA;
 }
+.cari ::placeholder{
+    font-family: nunito-sans;
+    font-size: 13px;
+}
 tr{
     text-align: justify;
 }
@@ -188,6 +227,9 @@ table{
     border: 2px solid #BFBFDB ;
     border-color: #BFBFDB;
     border-radius: 20px;
+}
+.kiriKanan a{
+    margin-top: -5px;
 }
 .app{
     width: 100%;
