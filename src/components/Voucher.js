@@ -320,9 +320,11 @@ function Voucher(){
                         aria-label="Search"
                         style={{backgroundColor:'#F5F8FA', marginTop:'8px', height:'40px'}}
                         />
-                        <span><svg style={{marginLeft:'-50px', marginTop:'15px'}} xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg></span>
+                        <span><svg style={{marginTop:'15px', marginLeft:'-40px'}} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.875 16.75C13.2242 16.75 16.75 13.2242 16.75 8.875C16.75 4.52576 13.2242 1 8.875 1C4.52576 1 1 4.52576 1 8.875C1 13.2242 4.52576 16.75 8.875 16.75Z" stroke="#253863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14.4431 14.4438L18.9994 19.0001" stroke="#253863" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </span>
                           
                         <Button onClick={tambahVoucher} style={{backgroundColor:'#253863', width:'300px', height:'40px',marginTop:'8px', marginRight:'10px'}}><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                                                                     <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
@@ -331,7 +333,7 @@ function Voucher(){
                     </div>
 
                     <div className="section d-flex ">
-                    <Nav variant="tabs" defaultActiveKey="section1" className="d-flex ">
+                    <Nav variant="tabs" defaultActiveKey="section1" className="tabz d-flex">
                         <Nav.Item className="border-0" >
                             <Nav.Link  type="checkbox" className="item-tab border-bottom mb-3" href="#" eventKey="section1" title="section1">Aktif (15)</Nav.Link>
                         </Nav.Item>
@@ -340,7 +342,7 @@ function Voucher(){
                         </Nav.Item>                        
                         </Nav>
 
-                        <Button onClick={hapusVoucher} hidden={hideHapus} style={{backgroundColor:'white', width:'150px', height:'40px',marginBottom:'10px', marginLeft:'715px', color:'red', borderColor:'red'}}>Hapus Voucher</Button>
+                        <Button onClick={hapusVoucher} hidden={hideHapus} style={{backgroundColor:'white', width:'150px', height:'40px',marginBottom:'-10px', marginLeft:'700px', color:'red', borderColor:'red'}}>Hapus Voucher</Button>
 
 
                     </div>

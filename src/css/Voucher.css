@@ -14,7 +14,7 @@
 .iconX{
     margin-left: -420px;
     z-index: 10000000 !important; 
-    width: 20px; 
+    width: 20px;
     position: fixed;
 }
 .btnHapusV{
