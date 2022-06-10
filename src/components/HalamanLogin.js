@@ -5,6 +5,8 @@ import { Button, Form, Modal } from "react-bootstrap";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../image/LogoAdminTokoRumahan.svg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 function HalamanLogin() {
   const [show, setShow] = useState(true);
@@ -24,7 +26,7 @@ function HalamanLogin() {
 
         <h5 className="txt-login">Login Admin</h5>
         <Form.Group className="form2 mb-3" controlId="formBasicEmail">
-          <Form.Label className="label">Email</Form.Label>
+          <Form.Label className="Llabel">Email</Form.Label>
           <Form.Control
             className="kotakForm"
             type="email"
@@ -33,7 +35,7 @@ function HalamanLogin() {
         </Form.Group>
 
         <Form.Group className="form2 mb-3" controlId="formBasicPassword">
-          <Form.Label className="label">Kata Sandi</Form.Label>
+          <Form.Label className="Llabel">Kata Sandi</Form.Label>
           <Form.Control
             className="kotakForm"
             type="password"
@@ -41,9 +43,11 @@ function HalamanLogin() {
           />
         </Form.Group>
 
+        <Link to="/adsbanner" style={{ textDecoration: "none" }}>
         <Button className="btnSubmit" variant="primary" type="submit">
           Masuk
         </Button>
+        </Link>
       </Form>
     </Modal>
   );

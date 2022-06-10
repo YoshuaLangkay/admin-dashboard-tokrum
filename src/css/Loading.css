@@ -1,0 +1,11 @@
+.loading .modal-content{
+    background-color: transparent;
+    width: 5%;
+    height: 10%;
+    border: none;
+    margin-top: 18%;
+    margin-left: 15%;
+}
+.loading.modal.show{
+    background-color: white !important;
+}

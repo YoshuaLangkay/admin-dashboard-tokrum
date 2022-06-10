@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Marketing from "./Marketing";
 import Voucher from "./Voucher";
 import HalamanLogin from "./HalamanLogin";
+import Loading from "./Loading";
 
 
 function SideNav() {
@@ -273,12 +274,12 @@ function SideNav() {
 					</div>
           <div className="Container-fluid isi">
 						<Routes>
-							<Route path="/" element={<Dasboard />} />
+							<Route path="/" element={<Loading />} />
 							<Route path="/adsbanner" element={<Marketing />} />
 							<Route path="/voucher" element={<Voucher />} />
 							<Route path="/verifikasi" element={<VerifikasiSeller />} />
 							<Route path="/login" element={<HalamanLogin />} />
-
+							
 						</Routes>
 					</div>
 				</div>

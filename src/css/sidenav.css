@@ -224,10 +224,11 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 	width: 86vw;
 }
 
-.profile {
+.content .profile {
 	height: 13.7vh !important;
 	border-bottom: 2px solid #e5ecfc;
 	margin-left: 8px;
+	margin-top: 1%;
 }
 
 .iconNotif {
@@ -252,5 +253,5 @@ background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/s
 }
 .isi {
 	height: auto;
-	margin-top: 50%;
+	margin-top: 0%;
 }

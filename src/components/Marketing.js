@@ -23,6 +23,7 @@ function Marketing() {
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [x, setX] = useState(false);
   const [hideModalTambahV, setHideModalTambahV] = useState(true);
+  const [terceklis, setTerceklis] = useState(false)
 
   // modal-tambah
   const [show, setShow] = useState(false);
@@ -108,12 +109,16 @@ function Marketing() {
   }
 
   function checkAll() {
+    let cekkk = document.getElementsByClassName("cekbox")
+
     setCekAll(true);
     setIsCheck(data.map((li) => li.id));
     if (cekAll) {
       setIsCheck([]);
       setCekAll(false);
       setHideHapus(true);
+      cekkk.isChecked = true
+
     } else {
       setHideHapus(false);
     }
