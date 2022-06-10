@@ -12,7 +12,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-th, td{
+.MisiTable, .MjudulTable{
     font-family: nunito-sans;
 }
 .iconX{
@@ -44,18 +44,10 @@ th, td{
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.modal-terhapus{
-    background-color: white;
-    width: 30%;
-    z-index: 10000000 !important; 
-    padding: 20px;
-    position: fixed;
-    margin-top: 500px;
-    margin-right: 600px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.VkananJudul{
+    margin-left: 500px;
 }
+
 .form-label{
     font-size: 16px;
     font-family: reg;

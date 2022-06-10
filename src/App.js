@@ -12,15 +12,16 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
+      <SideNav />
+      {/* <Routes>
         <Route path="/" element={<HalamanLogin/>}/>
         <Route path="/dasboard" element={<SideNav/>}/>
         <Route path="/verifikasi" element={<VerifikasiSeller/>}/>
         <Route path='/adsbanner' element={<Marketing />} />
         <Route path='/voucher' element={<Voucher />} />
-
-      </Routes>
+      </Routes> */}
     </BrowserRouter>
+    // <SideNav />
     
   );
 }

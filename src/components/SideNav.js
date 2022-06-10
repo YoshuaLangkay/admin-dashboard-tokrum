@@ -3,169 +3,286 @@ import "../css/sidenav.css";
 import iconTokrum from "../image/icontokrum.png";
 import Dasboard from "./Dasboard";
 import VerifikasiSeller from "./VerifikasiSeller";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Marketing from "./Marketing";
+import Voucher from "./Voucher";
+import HalamanLogin from "./HalamanLogin";
+
 
 function SideNav() {
   return (
-    <>
-      <div className="dasboard d-flex border">
-        <div className="side-nav">
-          <div className="text-center icontokrum  d-flex justify-content-center align-items-center">
-            <img src={iconTokrum} alt="icon"  />
-          </div>
-          <div className="mt-4 navbtn d-flex flex-column justify-content-center">
-            <Nav variant="pills" defaultActiveKey="#" className="flex-column">
-              <Nav.Item className="activebtn">
-                <Nav.Link href="#" className="labelLink">
-                  <div className="d-flex align-items-center mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#B6C7EE "
-                        d="m20.512 9.722-7.5-6.816a1.5 1.5 0 0 0-2.024 0l-7.5 6.816A1.5 1.5 0 0 0 3 10.828v8.634c-.006.379.127.746.375 1.032A1.49 1.49 0 0 0 4.5 21H9a.75.75 0 0 0 .75-.75v-4.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v4.5A.75.75 0 0 0 15 21h4.5c.249.002.494-.06.712-.178A1.51 1.51 0 0 0 21 19.5v-8.672a1.5 1.5 0 0 0-.488-1.106Z"
-                      />
-                    </svg>
-                    <span className="labelIcon mx-1 px-1 px-1 ">Dasboard</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="activebtn mt-2  ">
-                <Nav.Link eventKey="link-1" className="labelLink">
-                  <div className="d-flex align-items-center  mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <g fill="#B6C7EE">
-                        <path d="M12 15.375a4.125 4.125 0 1 0 0-8.25 4.125 4.125 0 0 0 0 8.25Z" />
-                        <path d="M12 2.25A9.75 9.75 0 1 0 21.75 12 9.769 9.769 0 0 0 12 2.25Zm6.169 15.225a7.622 7.622 0 0 0-2.297-2.156 5.597 5.597 0 0 1-7.744 0 7.622 7.622 0 0 0-2.297 2.156 8.25 8.25 0 1 1 12.338 0Z" />
-                      </g>
-                    </svg>
-                    <span className="labelIcon mx-1 px-1">Pengguna</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="activebtn mt-2  ">
-                <Nav.Link eventKey="link-2" className="labelLink">
-                  <div className="d-flex align-items-center  mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#B6C7EE"
-                        d="M21 4.5H3A1.5 1.5 0 0 0 1.5 6v11.991a1.5 1.5 0 0 0 1.5 1.5h18a1.5 1.5 0 0 0 1.5-1.5V6A1.5 1.5 0 0 0 21 4.5Zm-8.25 12h-1.5a.75.75 0 1 1 0-1.5h1.5a.75.75 0 1 1 0 1.5Zm6 0h-3a.75.75 0 1 1 0-1.5h3a.75.75 0 1 1 0 1.5ZM3 8.334V6h18v2.334H3Z"
-                      />
-                    </svg>
-                    <span className="labelIcon mx-1 px-1">Produk</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="activebtn mt-2  ">
-                <Nav.Link eventKey="link-3" className="labelLink">
-                  <div className="d-flex align-items-center  mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="26"
-                      fill="none"
-                      viewBox="0 0 26 26"
-                    >
-                      <g
-                        stroke="#B6C7EE  "
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2.438"
-                      >
-                        <path d="M13 22.75c5.385 0 9.75-4.365 9.75-9.75S18.385 3.25 13 3.25 3.25 7.615 3.25 13s4.365 9.75 9.75 9.75Z" />
-                        <path d="m14.727 14.727 2.275-5.739-5.729 2.285-2.295 5.749 5.749-2.295Z" />
-                      </g>
-                    </svg>
+    <div className="dasboard d-flex ">
+				<div className="side-nav">
+					<div className="text-center icontokrum  d-flex justify-content-center align-items-center">
+						<img src={iconTokrum} alt="icon" />
+					</div>
+					<div className="mt-3 navbtn d-flex flex-column justify-content-center  ">
+						<div className="accordion accordion-flush" id="accordionFlushExample">
+							{/* Dasboard */}
+							<div className="accordion-item">
+								<h2 className="accordion-header " id="flush-headingOne">
+									<Link to="/" style={{ textDecoration: "none" }}>
+										<button
+											className="accordion-button nonV "
+											aria-current="true"
+											type="button"
+											data-bs-toggle="collapse"
+											data-bs-target="#flush-collapseOne"
+											aria-expanded="true"
+											aria-controls="flush-collapseOne"
+										>
+											<span className="iconDasboard me-2" />
+											<span className="labelIcon">Dasboard</span>
+										</button>
+									</Link>
+								</h2>
+								<div
+									id="flush-collapseOne"
+									className="accordion-collapse collapse show"
+									aria-labelledby="flush-headingOne"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+							{/* Pengguna */}
+							<div className="accordion-item">
+								<h2 className="accordion-header  radius-top " id="flush-headingTwo">
+									<button
+										className="accordion-button collapsed radius-top"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseTwo"
+										aria-expanded="false"
+										aria-controls="flush-collapseTwo"
+									>
+										<span className="iconPengguna me-2" />
+										<span className="labelIcon">Pengguna</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapseTwo"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headingTwo"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div className="accordion-body  body-collapse d-flex flex-column">
+										<Link to="/buyer">
+											<button type="button" className="listCollapse">
+												<ul className="m-0">
+													<li>Buyer</li>
+												</ul>
+											</button>
+										</Link>
+										<Link to="/seller">
+											<button type="button" className="listCollapse">
+												<ul className="m-0">
+													<li>Seller</li>
+												</ul>
+											</button>
+										</Link>
+									</div>
+								</div>
+							</div>
+							{/* Transaksi */}
+							<div className="accordion-item">
+								<h2 className="accordion-header" id="flush-headingThree">
+								<Link to="/transaksi" style={{ textDecoration: "none" }}>
+									<button
+										className="accordion-button collapsed nonV "
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseEight"
+										aria-expanded="false"
+										aria-controls="flush-collapseEight"
+									>
+										<span className="iconTransaksi me-2" />
+										<span className="labelIcon">Transaksi</span>
+									</button>
+									</Link>
+								</h2>
+								<div
+									id="flush-collapseEight"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headingEight"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+							{/* Produk */}
+							<div className="accordion-item">
+								<h2 className="accordion-header" id="flush-headingThree">
+									<button
+										className="accordion-button collapsed nonV "
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseThree"
+										aria-expanded="false"
+										aria-controls="flush-collapseThree"
+									>
+										<span className="iconProduk me-2" />
+										<span className="labelIcon">Produk</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapseThree"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headingThree"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+							{/* Chat */}
+							<div className="accordion-item">
+								<h2 className="accordion-header" id="flush-headingFour">
+									<button
+										className="accordion-button collapsed nonV "
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseFour"
+										aria-expanded="false"
+										aria-controls="flush-collapseFour"
+									>
+										<span className="iconChat me-2" />
+										<span className="labelIcon">Chat</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapseFour"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headingFour"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+							{/* Marketing */}
+							<div className="accordion-item">
+								<h2 className="accordion-header radius-top" id="flush-headingFive">
+									<button
+										className="accordion-button collapsed radius-top"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapseFive"
+										aria-expanded="false"
+										aria-controls="flush-collapseFive"
+									>
+										<span className="iconMarketing me-2" />
+										<span className="labelIcon">Marketing</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapseFive"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headingFive"
+									data-bs-parent="#accordionFlushExample"
+								>
+									<div className="accordion-body  body-collapse d-flex flex-column">
+                  <Link to="/voucher" style={{ textDecoration: "none" }}>
+										<button type="button" className="listCollapse  ">
+											<ul className="m-0">
+												<li>Voucers</li>
+											</ul>
+										</button>
+                    </Link>
+                    <Link to="/adsbanner" style={{ textDecoration: "none" }}>
+										<button type="button" className="listCollapse">
+											<ul className="m-0">
+												<li>Ads Banner</li>
+											</ul>
+										</button>
+                    </Link>
+									</div>
+								</div>
+							</div>
+							{/* Garis  */}
+							<div className="my-2 mt-4 " style={{ borderBottom: "1px solid #E5ECFC" }}></div>
+							{/* Pengaturan */}
+							<div className="accordion-item">
+								<h2 className="accordion-header" id="flush-headingSix">
+									<button
+										className="accordion-button collapsed nonV"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapsSix"
+										aria-expanded="false"
+										aria-controls="flush-collapsSix"
+									>
+										<span className="iconPengaturan me-2" />
+										<span className="labelIcon">Pengaturan</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapsSix"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headinSix"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+							{/* Pusat */}
+							<div className="accordion-item">
+								<h2 className="accordion-header" id="flush-headingSeven">
+									<button
+										className="accordion-button collapsed nonV"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#flush-collapsSeven"
+										aria-expanded="false"
+										aria-controls="flush-collapsSeven"
+									>
+										<span className="iconBantuan me-2" />
+										<span className="labelIcon ">Pusat Bantuan</span>
+									</button>
+								</h2>
+								<div
+									id="flush-collapsSeven"
+									className="accordion-collapse collapse"
+									aria-labelledby="flush-headinSeven"
+									data-bs-parent="#accordionFlushExample"
+								></div>
+							</div>
+						</div>
+						<div className="boxExit  d-flex align-items-center justify-content-center  fixed-bottom ">
+							<Button className="button-keluar mb-3">Keluar</Button>
+						</div>
+					</div>
+				</div>
 
-                    <span className="labelIcon mx-1 px-1">Chat</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-              <div className="text-center my-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="184"
-                  height="2"
-                  fill="none"
-                  viewBox="0 0 184 2"
-                >
-                  <path
-                    stroke="#E5ECFC"
-                    stroke-linecap="round"
-                    stroke-width="1.097"
-                    d="M1 1h182"
-                  />
-                </svg>
-              </div>
-              <Nav.Item className="activebtn ">
-                <Nav.Link eventKey="link-4" className="labelLink">
-                  <div className="d-flex align-items-center mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#B6C7EE"
-                        d="M22.266 9.778a.75.75 0 0 0-.375-.497l-2.232-1.237a6.995 6.995 0 0 0-.393-.703l.037-2.55a.776.776 0 0 0-.244-.572 10.5 10.5 0 0 0-3.853-2.222.759.759 0 0 0-.618.075l-2.185 1.312a12.034 12.034 0 0 0-.806 0L9.413 2.072a.76.76 0 0 0-.62-.075 10.416 10.416 0 0 0-3.852 2.231.74.74 0 0 0-.244.563l.047 2.55c-.15.225-.281.459-.413.703L2.11 9.28a.722.722 0 0 0-.375.497 10.444 10.444 0 0 0 0 4.444.75.75 0 0 0 .375.497l2.232 1.237c.12.243.254.478.403.703l-.047 2.55a.778.778 0 0 0 .244.572 10.585 10.585 0 0 0 3.853 2.222.758.758 0 0 0 .618-.075l2.185-1.312h.806l2.194 1.312a.684.684 0 0 0 .384.113.937.937 0 0 0 .225-.038 10.416 10.416 0 0 0 3.853-2.231.741.741 0 0 0 .244-.563l-.037-2.55c.14-.225.272-.459.403-.703l2.23-1.235a.741.741 0 0 0 .366-.497 10.47 10.47 0 0 0 0-4.444ZM16.125 12a4.125 4.125 0 1 1-8.25 0 4.125 4.125 0 0 1 8.25 0Z"
-                      />
-                    </svg>
+				{/* SIDE NAV */}
 
-                    <span className="labelIcon mx-1 px-1">Pengaturan</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item className="activebtn mt-2">
-                <Nav.Link eventKey="link-5" className="labelLink">
-                  <div className="d-flex align-items-center mt-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="#B6C7EE"
-                        d="M12 2.25A9.75 9.75 0 1 0 21.75 12 9.769 9.769 0 0 0 12 2.25ZM12 18a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 18Zm.75-4.584v.084a.75.75 0 1 1-1.5 0v-.75A.75.75 0 0 1 12 12a1.875 1.875 0 1 0-1.875-1.875.75.75 0 1 1-1.5 0 3.375 3.375 0 1 1 4.125 3.29Z"
-                      />
-                    </svg>
-                    <span className="labelIcon mx-1 px-1">Pusat Bantuan</span>
-                  </div>
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-            <div className="exit pb-3 d-flex align-items-end justify-content-center">
-              <Button className="button-Keluar">Keluar</Button>
-            </div>
-          </div>
-        </div>
+				<div className="content ">
+					{/* <Profile /> */}
+					<div className="profile d-flex align-items-center  d-flex justify-content-end ">
+						<div className="isiProfile d-flex mb-2 me-5 ">
+							<div className="iconNotif">
+								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" viewBox="0 0 50 50">
+									<rect width="50" height="50" fill="#fff" rx="25" />
+									<path
+										fill="#253863"
+										d="m35.786 20.002-.287.347c-1.288 1.56-2.068 2.5-2.068 6.915 0 2.285-.547 4.16-1.625 5.566-.794 1.039-1.868 1.827-3.284 2.41a.175.175 0 0 0-.048.038c-.509 1.706-1.902 2.848-3.474 2.848-1.571 0-2.964-1.142-3.473-2.846a.182.182 0 0 0-.048-.038c-3.303-1.36-4.909-3.969-4.909-7.977 0-4.415-.779-5.356-2.069-6.914l-.286-.347a2.059 2.059 0 0 1-.273-2.205c.362-.761 1.132-1.234 2.012-1.234h18.099c.875 0 1.64.472 2.003 1.23a2.061 2.061 0 0 1-.27 2.207ZM25 11.875a4.691 4.691 0 0 1 4.127 2.469.235.235 0 0 1-.207.344h-7.84a.235.235 0 0 1-.208-.344A4.692 4.692 0 0 1 25 11.875Z"
+									/>
+									<circle r="4" fill="#EA4335" transform="matrix(1 0 0 -1 32.2 34)" />
+								</svg>
+							</div>
+							<div className="d-flex flex-column mx-2">
+								<span className="namaProfile">Sri Annisa</span>
+								<span className="titleJob">Admin</span>
+							</div>
+							<div>
+								<img
+									src="https://img.idxchannel.com/media/700/images/idx/2022/01/13/ghazli.jpeg"
+									className="foto"
+									alt="foto"
+								/>
+							</div>
+						</div>
+					</div>
+          <div className="Container-fluid isi">
+						<Routes>
+							<Route path="/" element={<Dasboard />} />
+							<Route path="/adsbanner" element={<Marketing />} />
+							<Route path="/voucher" element={<Voucher />} />
+							<Route path="/verifikasi" element={<VerifikasiSeller />} />
+							<Route path="/login" element={<HalamanLogin />} />
 
-        {/* SIDE NAV */}
-
-        <div className="content">
-          <VerifikasiSeller/>
-          
-        </div>
-      </div>
-    </>
+						</Routes>
+					</div>
+				</div>
+			</div>
   );
 }
 

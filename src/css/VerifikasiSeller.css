@@ -3,12 +3,6 @@
     margin: 0;
     padding: 0;
   }
-
-   
-  .body{
-    
-  }
-  
   .bloc-tabs {
     display: flex;
   }
@@ -40,14 +34,7 @@
   @font-face{
     font-family: nunito-bold;
     src:url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
-  }
-
-  /* @font-face{
-    font-family: nunito;
-    src:url('../font/Nunito_Sans/N');
-  } */
-  
-   
+  } 
   button {
     border: none;
     
@@ -55,10 +42,10 @@
   .content-tabs {
     flex-grow : 1;
   }
-  .content {
+  /* .content {
 
     display: none;
-  }
+  } */
   .content h2 {
     padding: 0px 0 5px 0px;
   }
@@ -106,7 +93,6 @@
     font-size: 12px;
     color: #8F90A6!important;
     width: 150px;
-    /* font-family: 'Nunito', sans-serif;   */
     font-family: nunito;
 
   }
@@ -119,12 +105,10 @@
     padding-left: 50px;
   }
   .daftarkan-txt{
-    /* font-family: 'Nunito', sans-serif; */
     font-size: 36px;
     font-family: nunito;
   }
   .pastikan-txt{
-    /* font-family: 'Nunito', sans-serif; */
     font-size:24px;
     font-family: nunito;
 
@@ -134,7 +118,6 @@
   }
   .title{
     font-size: 20px;
-    /* font-family: 'Nunito', sans-serif; */
     margin-left: 5%;
     margin-bottom: 2%;
     font-family: nunito-bold;
@@ -148,7 +131,7 @@
   }
   .ktp{
     margin-left: 40px;
-    width: 170px;
+    width: 175px;
   }
   .text-berhasil{
     font-family: nunito-bold;
@@ -161,7 +144,7 @@
     margin-top: 50px;
   }
   .ktp-form{
-    width: 190%!important;
+    width: 205%!important;
   }
   .icon-berhasil{
     margin-left: 65px;
@@ -173,10 +156,12 @@
   .ceklis{
     margin-left: -7px;
   }
-  .popup-berhasil{
+  .VKpopup-berhasil .modal-content {
     margin-top: 200px;
     position: fixed;
-    margin-left: 42%;
+    margin-left: 4%;
+    width: 18%;
+    height: 35%;
     z-index: 10000 !important;  
   }
   .kotak-warning{
@@ -230,14 +215,13 @@
   }
   .title-thx{
     margin-top: 100px;
-    /* font-family: 'Nunito', sans-serif; */
     font-family: nunito;
 
   }
   .jenisKelamin{
-      width: 325px;
+      width: 360px;
       height: 35px;
-      margin-left: 25px;
+      margin-left: 30px;
   }
   .label-jeniskelamin{
       margin-left: 30px;
@@ -252,12 +236,21 @@
     height: 30px;
     margin-bottom: -20px;
   }
+  .body{
+    margin-top: -100px;
+  }
+  .VKmodal .modal-content{
+    width: 60%;
+    margin-left: -180px;
+  }
+  .formModal{
+  }
   .form-user{
     margin-top:  -10px !important;
     margin-bottom: 10%;
     border-radius: 24px;
     width: 70%;
-    height: 5% !important;
+    height: 2% !important;
     opacity: 1 !important;
     background-color: white !important;
   }
@@ -269,7 +262,7 @@
   }
   .icon-garis{
     z-index: 0 !important;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: -50px;
     height: 2px;
     width: 100px;
@@ -278,7 +271,6 @@
     margin-left: -60px;
   }
   h1, h2, h3, h4, h5, h6{
-    /* font-family: 'Nunito', sans-serif; */
     font-family: nunito;
 
   }
@@ -291,7 +283,7 @@
   section{
     height: 60% !important;
     margin-left: -20px;
-    padding-top: 4%;
+    padding-top: 2%;
   }
   input{
     height: 55% ;
