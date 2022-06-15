@@ -43,6 +43,9 @@
     margin: 10px;
     color: black;
   }
+  .text-upload{
+    font-family: nunito-sans;
+  }
   .border-container a{
       color: #253863;
   }
@@ -93,7 +96,7 @@
     -moz-appearance: none;
     -o-appearance: none;
     appearance: none;
-    border: 1px solid #C2C2C2;
+    border: 1px solid #C2C2C2 !important;
     border-radius: 4px;
     outline: none;
     transition-duration: 0.3s;
@@ -140,7 +143,7 @@
     font-weight: 600;
 }
 .MKrow1{
-    margin-top: 2%;
+    margin-top: 5%;
 }
 .MKrow2{
     margin-top: 5%;

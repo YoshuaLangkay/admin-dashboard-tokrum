@@ -418,12 +418,14 @@ function Marketing() {
               </div>
             </div>
             <p
+            className="text-upload"
               style={{
-                marginLeft: "33%",
+                marginLeft: "36%",
                 marginTop: "-10px",
-                fontSize: "16px",
+                fontSize: "14px",
                 width: "224px",
                 height: "36px",
+                color:'grey'
               }}
             >
               <sup style={{ color: "red" }}>*</sup>
@@ -431,7 +433,7 @@ function Marketing() {
             </p>
           </div>
         </Row>
-        <Row className="MKrow1 pt-5">
+        <Row className="MKrow1 pt-5" style={{marginTop:'20px'}}>
           <Form.Group
             as={Col}
             controlId="formGridEmail"

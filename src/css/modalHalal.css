@@ -1,13 +1,34 @@
 .modalSertifikatHalal .modal-content {
-    width: 150%;
-    margin-left: -25%;
+    width: 120%;
+    margin-left: -5%;
     padding: 12px;
+    margin-top: -10px;
+}
+.modalPenolakan .modal-content{
+    width: 165%;
+    margin-left: -25% !important;
+}
+.modalSertifikatHalal.modal.show{
+    background-color: transparent;
+    overflow: hidden;
 }
 .img-sh{
     width: 90%;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 .modalSertifBody{
     background-color: #C0C2C3;
     padding: 12px;
+}
+.logo-download{
+    margin-left: 90%;
+    margin-bottom: -50px;
+    z-index: 10000;
+}
+.alert-konfirm{
+    width: 60%;
+    z-index: 9999999;
+    position: fixed;
+    margin-top: 200px;
+    margin-left: 50px;
 }
