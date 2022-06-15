@@ -313,6 +313,7 @@
 }
 .ds-list-produk {
 	list-style: none;
+	height: 7.3vh;
 }
 .ds-img-produk img {
 	width: 3.5vw;
@@ -339,7 +340,7 @@
 
 }
 .ds-harga-produk {
-	font-family: "Nunito700";
+	font-family: "Nunito800";
 	font-size: 20px;
 	line-height: 23px;
 	letter-spacing: 0.0015em;

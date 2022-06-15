@@ -1,4 +1,4 @@
-import { Table, Pagination, Container, Button } from "react-bootstrap";
+import { Table, Container, Button } from "react-bootstrap";
 import "../css/dasboard.css";
 
 function Dasboard() {
@@ -27,6 +27,12 @@ function Dasboard() {
 			harga: 1500,
 			foto: "https://1.bp.blogspot.com/-dxCx33BMkhI/YUvyF_h82gI/AAAAAAAABMM/cmzd-TqHfJkOMGiFUwTVh6kCBIqLt7cqACLcBGAsYHQ/s640/k%2B2.jpg",
 		},
+		{
+			namaProduk: "Kemeja keren",
+			jenis: "Fashion Pria",
+			harga: 1500,
+			foto: "https://1.bp.blogspot.com/-dxCx33BMkhI/YUvyF_h82gI/AAAAAAAABMM/cmzd-TqHfJkOMGiFUwTVh6kCBIqLt7cqACLcBGAsYHQ/s640/k%2B2.jpg",
+		},
 	];
 
 	return (
@@ -34,8 +40,8 @@ function Dasboard() {
 			<div className="box-dasboard mt-3  ms-3 d-flex justify-content-between">
 				<div className="ds-kiri me-3 d-flex flex-column ">
 					<div className="ds-transaksi  d-flex justify-content-between">
-						<div className="ds-isi-transaksi bg-white d-flex flex-column">
-							<span className="ds-label-transaksi mx-3 mt-3 ">
+						<div className="ds-isi-transaksi bg-white d-flex flex-column  justify-content-center">
+							<span className="ds-label-transaksi mx-3 ">
 								Nominal Transaksi
 								<span className="ms-1">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
@@ -59,8 +65,8 @@ function Dasboard() {
 							</span>
 							<span className="label_jumlah_transaksi mx-3 mt-2"> Rp 50.000.000</span>
 						</div>
-						<div className="ds-isi-transaksi bg-white d-flex flex-column">
-							<span className="ds-label-transaksi mx-3 mt-3 ">
+						<div className="ds-isi-transaksi bg-white d-flex flex-column  justify-content-center">
+							<span className="ds-label-transaksi mx-3 ">
 								Total Transaksi
 								<span className="ms-1">
 									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
@@ -87,19 +93,19 @@ function Dasboard() {
 						</div>
 					</div>
 					<div className="ds-user mt-4 d-flex justify-content-between">
-						<div className="ds-isi-user d-flex flex-column bg-white">
-							<span className="ds-label-transaksi mx-3 mt-3 ">Buyer Baru</span>
-							<span className="label_jumlah_transaksi mx-3 mt-1  "> 666</span>
+						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
+							<span className="ds-label-transaksi mx-3  ">Buyer Baru</span>
+							<span className="label_jumlah_transaksi mx-3 my-1  "> 666</span>
 							<span className="hint_box_transaksi mx-3"> User</span>
 						</div>
-						<div className="ds-isi-user d-flex flex-column bg-white">
-							<span className="ds-label-transaksi mx-3 mt-3 ">Seller Baru</span>
-							<span className="label_jumlah_transaksi mx-3 mt-1  "> 777</span>
+						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
+							<span className="ds-label-transaksi mx-3">Seller Baru</span>
+							<span className="label_jumlah_transaksi mx-3 my-1  "> 777</span>
 							<span className="hint_box_transaksi mx-3"> User</span>
 						</div>
-						<div className="ds-isi-user d-flex flex-column bg-white">
-							<span className="ds-label-transaksi mx-3 mt-3 ">Menunggu Verifikasi</span>
-							<span className="label_jumlah_transaksi mx-3 mt-1  "> 8888</span>
+						<div className="ds-isi-user d-flex flex-column bg-white  justify-content-center">
+							<span className="ds-label-transaksi mx-3  ">Menunggu Verifikasi</span>
+							<span className="label_jumlah_transaksi mx-3 my-1  "> 8888</span>
 							<span className="hint_box_transaksi mx-3"> User</span>
 						</div>
 					</div>
@@ -166,16 +172,16 @@ function Dasboard() {
 					</div>
 				</div>
 				<div className="ds-kanan d-flex flex-column">
-					<div className="ds-isi-kanan bg-white d-flex flex-column p-3">
+					<div className="ds-isi-kanan bg-white d-flex flex-column p-3 ">
 						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
 							<span className="ds-label-produk">Produk Terlaris</span>
-							<span className="ds-hint-detail">Lihat Detail</span>
+							<span className="ds-hint-detail me-3">Lihat Detail</span>
 						</div>
 						<div className="mt-3">
 							{ProdukTerlaris.map((el, i) => (
-								<ul className="d-flex ds-list-produk p-0 px-3" key={i}>
+								<ul className="d-flex ds-list-produk p-0 px-3 mb-2 " key={i}>
 									<li className="ds-img-produk me-3">
-										<img src={el.foto} />
+										<img src={el.foto} alt="img-produk"/>
 									</li>
 									<li className="ds-box-nama-produk d-flex flex-column mt-2">
 										<span className="ds-nama-produk">{el.namaProduk}</span>
@@ -190,16 +196,16 @@ function Dasboard() {
 						</div>
 					</div>
 					{/* Bawah */}
-					<div className="ds-isi-kanan bg-white d-flex flex-column p-3 mt-3">
+					<div className="ds-isi-kanan bg-white d-flex flex-column pe-3 ps-3 pt-3 mt-3">
 						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
 							<span className="ds-label-produk">Brand Terlaris</span>
-							<span className="ds-hint-detail">Lihat Detail</span>
+							<span className="ds-hint-detail me-3">Lihat Detail</span>
 						</div>
 						<div className="mt-3">
 							{ProdukTerlaris.map((el, i) => (
-								<ul className="d-flex ds-list-produk p-0 px-3" key={i}>
+								<ul className="d-flex ds-list-produk p-0 px-3 mb-2" key={i}>
 									<li className="ds-img-produk me-3">
-										<img src={el.foto} />
+										<img src={el.foto} alt="img-produk"/>
 									</li>
 									<li className="ds-box-nama-produk d-flex flex-column mt-2">
 										<span className="ds-nama-produk">{el.namaProduk}</span>

@@ -7,6 +7,8 @@ import UserBuyer from "../pages/UserBuyer";
 import UserSeller from "../pages/UserSeller";
 import DetailBuyer from "../pages/DetailBuyer";
 import DetailSeller from "../pages/DetailSeller";
+import Marketing from "../pages/Marketing";
+import Transaksi from "../pages/Transaksi";
 // import HalamanLogin from "./HalamanLogin";
 
 function SideNav() {
@@ -271,11 +273,12 @@ function SideNav() {
 					<div className="Container-fluid isi">
 						<Routes>
 							<Route path="/" element={<Dasboard />} />
-							{/* <Route path="/login" element={<HalamanLogin />} /> */}
 							<Route path="/buyer" element={<UserBuyer />} />
 							<Route path="/buyer/detail" element={<DetailBuyer />} />
 							<Route path="/seller" element={<UserSeller />} />
 							<Route path="/seller/detail" element={<DetailSeller />} />
+							<Route path="/marketing" element={<Marketing />} />
+							<Route path="/transaksi" element={<Transaksi />} />
 						</Routes>
 					</div>
 				</div>

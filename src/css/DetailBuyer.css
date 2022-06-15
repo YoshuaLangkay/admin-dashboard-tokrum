@@ -78,11 +78,7 @@
 	border-radius: 10px;
 	border: 1px dashed #e4e6ef;
 }
-.jml-num {
-	color: #3f4254;
-	font-family: "Nunito900";
-	font-size: 20px;
-}
+
 .jml-hint {
 	color: #b5b5c3;
 	font-family: "Nunito400";
