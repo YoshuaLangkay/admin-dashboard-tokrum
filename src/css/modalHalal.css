@@ -32,3 +32,19 @@
     margin-top: 200px;
     margin-left: 50px;
 }
+.txt-konfirmasi{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+.txt-tutup{
+    font-family: n-sans !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: n-sans;
+    src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
+}
