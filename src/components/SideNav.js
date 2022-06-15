@@ -1,18 +1,22 @@
-import { Nav, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import "../css/sidenav.css";
-import iconTokrum from "../image/icontokrum.png";
+import iconTokrum from "../image/icontokrumds.png";
 import Dasboard from "./Dasboard";
-import VerifikasiSeller from "./VerifikasiSeller";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import UserBuyer from "../pages/UserBuyer";
+import UserSeller from "../pages/UserSeller";
+// import DetailBuyer from "../pages/DetailBuyer";
+import DetailSeller from "../pages/DetailSeller";
 import Marketing from "./Marketing";
-import Voucher from "./Voucher";
+// import Transaksi from "./Transaksi";
 import HalamanLogin from "./HalamanLogin";
-import Loading from "./Loading";
-
+import Voucher from "./Voucher";
+import VerifikasiSeller from "./VerifikasiSeller";
+// import HalamanLogin from "./HalamanLogin";
 
 function SideNav() {
-  return (
-    <div className="dasboard d-flex ">
+	return (
+			<div className="dasboard d-flex ">
 				<div className="side-nav">
 					<div className="text-center icontokrum  d-flex justify-content-center align-items-center">
 						<img src={iconTokrum} alt="icon" />
@@ -173,20 +177,20 @@ function SideNav() {
 									data-bs-parent="#accordionFlushExample"
 								>
 									<div className="accordion-body  body-collapse d-flex flex-column">
-                  <Link to="/voucher" style={{ textDecoration: "none" }}>
-										<button type="button" className="listCollapse  ">
+									<Link to="/voucher" style={{ textDecoration: "none" }}>
+									<button type="button" className="listCollapse">
 											<ul className="m-0">
 												<li>Voucers</li>
 											</ul>
 										</button>
-                    </Link>
-                    <Link to="/adsbanner" style={{ textDecoration: "none" }}>
+									</Link>
+									<Link to="/adsbanner" style={{ textDecoration: "none" }}>
 										<button type="button" className="listCollapse">
 											<ul className="m-0">
 												<li>Ads Banner</li>
 											</ul>
 										</button>
-                    </Link>
+									</Link>
 									</div>
 								</div>
 							</div>
@@ -272,19 +276,25 @@ function SideNav() {
 							</div>
 						</div>
 					</div>
-          <div className="Container-fluid isi">
+					<div className="Container-fluid isi">
 						<Routes>
-							<Route path="/" element={<Loading />} />
+							<Route path="/" element={<Dasboard />} />
+							{/* <Route path="/buyer" element={<UserBuyer />} />
+							<Route path="/buyer/detail" element={<DetailBuyer />} />
+							<Route path="/seller" element={<UserSeller />} />
+							<Route path="/seller/detail" element={<DetailSeller />} /> */}
 							<Route path="/adsbanner" element={<Marketing />} />
+							<Route path="/seller" element={<UserSeller />} />
+							<Route path="/seller/detail" element={<DetailSeller />} />
 							<Route path="/voucher" element={<Voucher />} />
-							<Route path="/verifikasi" element={<VerifikasiSeller />} />
 							<Route path="/login" element={<HalamanLogin />} />
-							
+							<Route path="/verifikasi" element={<VerifikasiSeller />} />
+							{/* <Route path="/transaksi" element={<Transaksi />} /> */}
 						</Routes>
 					</div>
 				</div>
 			</div>
-  );
+	);
 }
 
 export default SideNav;

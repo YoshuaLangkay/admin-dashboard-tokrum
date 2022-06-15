@@ -43,7 +43,7 @@ function HalamanLogin() {
           />
         </Form.Group>
 
-        <Link to="/adsbanner" style={{ textDecoration: "none" }}>
+        <Link to="/" style={{ textDecoration: "none" }}>
         <Button className="btnSubmit" variant="primary" type="submit">
           Masuk
         </Button>

@@ -4,6 +4,8 @@ import {
   Button,
   FormControl,
   Form,
+  Tabs,
+  Tab,
   Nav,
   Table,
   Pagination,
@@ -23,7 +25,6 @@ function Marketing() {
   const [isCheckAll, setIsCheckAll] = useState(false);
   const [x, setX] = useState(false);
   const [hideModalTambahV, setHideModalTambahV] = useState(true);
-  const [terceklis, setTerceklis] = useState(false)
 
   // modal-tambah
   const [show, setShow] = useState(false);
@@ -131,6 +132,90 @@ function Marketing() {
       setHideModalTambahV(true);
     }
   }
+
+  let sectionTiga = [
+    {
+      id: 1,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 2,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 3,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 4,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 5,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 5,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    }
+  ]
+
+
+  let sectionDua = [
+    {
+      id: 1,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 2,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 3,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 4,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    },
+    {
+      id: 5,
+      namaIklan: "Iklan Brand Mantap",
+      tanggalMulai: "25 Mei 2020",
+      tanggalSelesai: "25 Mei 2020",
+      kategori: "Iklan Produk",
+    }
+  ]
 
   let data = [
     {
@@ -334,7 +419,7 @@ function Marketing() {
             </div>
             <p
               style={{
-                marginLeft: "40px",
+                marginLeft: "33%",
                 marginTop: "-10px",
                 fontSize: "16px",
                 width: "224px",
@@ -444,50 +529,6 @@ function Marketing() {
         </Button>
       </Modal>
 
-      {/* <SideNav/>
-        
-        <div className="profile d-flex align-items-center  d-flex justify-content-end " style={{height:'50px'}}>
-					<div className="isiProfile d-flex  me-3 ">
-						<div className="iconNotif">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="44"
-								height="44"
-								fill="none"
-								viewBox="0 0 50 50"
-							>
-								<rect
-									width="50"
-									height="50"
-									fill="#fff"
-									rx="25"
-								/>
-								<path
-									fill="#253863"
-									d="m35.786 20.002-.287.347c-1.288 1.56-2.068 2.5-2.068 6.915 0 2.285-.547 4.16-1.625 5.566-.794 1.039-1.868 1.827-3.284 2.41a.175.175 0 0 0-.048.038c-.509 1.706-1.902 2.848-3.474 2.848-1.571 0-2.964-1.142-3.473-2.846a.182.182 0 0 0-.048-.038c-3.303-1.36-4.909-3.969-4.909-7.977 0-4.415-.779-5.356-2.069-6.914l-.286-.347a2.059 2.059 0 0 1-.273-2.205c.362-.761 1.132-1.234 2.012-1.234h18.099c.875 0 1.64.472 2.003 1.23a2.061 2.061 0 0 1-.27 2.207ZM25 11.875a4.691 4.691 0 0 1 4.127 2.469.235.235 0 0 1-.207.344h-7.84a.235.235 0 0 1-.208-.344A4.692 4.692 0 0 1 25 11.875Z"
-								/>
-								<circle
-									r="4"
-									fill="#EA4335"
-									transform="matrix(1 0 0 -1 32.2 34)"
-								/>
-							</svg>
-						</div>
-						<div className="d-flex flex-column mx-2">
-							<span className="namaProfile">Sri Annisa</span>
-							<span className="titleJob">Admin</span>
-						</div>
-						<div>
-							<img
-								src="https://img.idxchannel.com/media/700/images/idx/2022/01/13/ghazli.jpeg"
-								className="foto"
-								alt="foto"
-							/>
-						</div>
-					</div>
-                    
-				</div> */}
-
       <div
         className="isiMarketing"
         style={{
@@ -569,33 +610,7 @@ function Marketing() {
         </div>
 
         <div className="section d-flex ">
-          <Nav
-            variant="tabs"
-            defaultActiveKey="section1"
-            className="tabz d-flex "
-          >
-            <Nav.Item className="border-0">
-              <Nav.Link
-                type="checkbox"
-                className="item-tab border-bottom mb-3"
-                href="#"
-                eventKey="section1"
-                title="section1"
-              >
-                Section 1
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="item-tab border-bottom" eventKey="link-1">
-                Section 2
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="item-tab border-bottom" eventKey="disabled">
-                Section 3
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
+        
 
           <Button
             onClick={handleShowHapus}
@@ -604,8 +619,8 @@ function Marketing() {
               backgroundColor: "white",
               width: "150px",
               height: "40px",
-              marginBottom: "-10px",
-              marginLeft: "610px",
+              marginBottom: "-100px",
+              marginLeft: "960px",
               color: "red",
               borderColor: "red",
             }}
@@ -614,7 +629,9 @@ function Marketing() {
           </Button>
         </div>
 
-        <div className="app container ">
+        <div className="appTable container ">
+        <Tabs className="tabz d-flex mb-3" defaultActiveKey="section1" id="uncontrolled-tab-example">
+          <Tab className="item-tab" eventKey="section1" title="Section 1">
           <table class="table table-hover ">
             <thead>
               <tr style={{ backgroundColor: "#FBFBFB" }}>
@@ -655,7 +672,7 @@ function Marketing() {
               }) {
                 return (
                   <tr id={id}>
-                    <td>
+                    <td className="MisiTable">
                       {
                         <Form.Check
                           aria-label="option 1"
@@ -672,7 +689,7 @@ function Marketing() {
                         />
                       }
                     </td>
-                    <td>
+                    <td className="MisiTable">
                       <img src={iklan} alt="iklan" width={"90px"} />
                     </td>
                     <td className="MisiTable" style={{ paddingTop: "15px" }}>
@@ -687,7 +704,7 @@ function Marketing() {
                     <td className="MisiTable" style={{ paddingTop: "15px" }}>
                       {kategori}
                     </td>
-                    <td style={{ paddingTop: "15px" }}>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
                       <a href="#" className="Mselengkapnya">
                         Selengkapnya
                       </a>
@@ -697,7 +714,182 @@ function Marketing() {
               })}
             </tbody>
           </table>
-        </div>
+          </Tab>
+          <Tab className="item-tab" eventKey="profile" title="Section 2" >
+            {/* section 2 */}
+
+          <table class="table table-hover ">
+            <thead>
+              <tr style={{ backgroundColor: "#FBFBFB" }}>
+                <th scope="col">
+                  <Form.Check
+                    handleClick={checkAll}
+                    isChecked={isCheckAll}
+                    aria-label="option 1"
+                    onClick={checkAll}
+                    style={{ align: "center" }}
+                  />
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Asset
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Nama Iklan
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Tanggal Mulai
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Tanggal Selesai
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Kategori
+                </th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody style={{ borderColor: "grey", borderStyle: "none" }}>
+              {sectionDua.map(function ({
+                id,
+                namaIklan,
+                tanggalMulai,
+                tanggalSelesai,
+                kategori,
+              }) {
+                return (
+                  <tr id={id}>
+                    <td className="MisiTable">
+                      {
+                        <Form.Check
+                          aria-label="option 1"
+                          className="cekbox"
+                          type="checkbox"
+                          onClick={handleClick}
+                          id={id}
+                          name="foo"
+                          style={{
+                            align: "center",
+                            paddingTop: "10px",
+                            color: "#253863",
+                          }}
+                        />
+                      }
+                    </td>
+                    <td className="MisiTable">
+                      <img src={iklan} alt="iklan" width={"90px"} />
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {namaIklan}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {tanggalMulai}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {tanggalSelesai}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {kategori}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      <a href="#" className="Mselengkapnya">
+                        Selengkapnya
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          </Tab>
+          <Tab className="item-tab" eventKey="contact" title="Section 3">
+            {/* section 3 */}
+
+          <table class="table table-hover ">
+            <thead>
+              <tr style={{ backgroundColor: "#FBFBFB" }}>
+                <th scope="col">
+                  <Form.Check
+                    handleClick={checkAll}
+                    isChecked={isCheckAll}
+                    aria-label="option 1"
+                    onClick={checkAll}
+                    style={{ align: "center" }}
+                  />
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Asset
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Nama Iklan
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Tanggal Mulai
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Tanggal Selesai
+                </th>
+                <th className="MjudulTable" scope="col">
+                  Kategori
+                </th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody style={{ borderColor: "grey", borderStyle: "none" }}>
+              {sectionTiga.map(function ({
+                id,
+                namaIklan,
+                tanggalMulai,
+                tanggalSelesai,
+                kategori,
+              }) {
+                return (
+                  <tr id={id}>
+                    <td className="MisiTable" >
+                      {
+                        <Form.Check
+                          aria-label="option 1"
+                          className="cekbox"
+                          type="checkbox"
+                          onClick={handleClick}
+                          id={id}
+                          name="foo"
+                          style={{
+                            align: "center",
+                            paddingTop: "10px",
+                            color: "#253863",
+                          }}
+                        />
+                      }
+                    </td>
+                    <td className="MisiTable">
+                      <img src={iklan} alt="iklan" width={"90px"} />
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {namaIklan}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {tanggalMulai}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {tanggalSelesai}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      {kategori}
+                    </td>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      <a href="#" className="Mselengkapnya">
+                        Selengkapnya
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          </Tab>
+        </Tabs>
+          </div>
+
       </div>
     </>
   );

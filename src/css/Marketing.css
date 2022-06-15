@@ -84,6 +84,7 @@
     font-weight: bold;
 }
 /* cekbox */
+
 .cekbox > input:checked {
     background-color: #253863;
 }
@@ -103,11 +104,20 @@
     font-family: nunito-sans !important;
     text-align: left !important;
 }
+
 .tabz{
-    border-color: white;
+    border-color: white !important;
     margin-bottom: -30px;
     font-family: nunito-sans;
     font-size: 16px;
+    color: #B1B1B1;
+    border: none;
+}
+.tabz button{
+    color: #B1B1B1;
+}
+.tabz button:hover{
+    color: #B1B1B1;
 }
 .project-tab .nav-link {
     border: 1px solid transparent;
@@ -162,20 +172,24 @@
 /* tabssss */
 
 /* modal-content */
-.modal-content{
+.modalShowAds .modal-content{
     position:fixed;
     width: 50%;
     height: 95%;
-    margin-left: -5%;
+    margin-left: -10%;
     padding: 20px;
     border-radius: 12px;
 }
-.modal{
+.modal.show{
     background-color: #444444;
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
     animation-duration: 0.4s
+}
+.modalShowAds .border-container{
+    width: 50%;
+    margin-left: 25%;
 }
 
 /* hapus */
@@ -258,12 +272,17 @@
     margin-top: 1%;
     margin-left: 15px;
     height: 47px;
+    font-family: th ;
 }
+/* .nav-link.active{
+    background-color: #007b5e;
+} */
 
-.item-tab{
+.item-tab button{
     font-size: 18px;
     margin-left: 10px;
     color: #BFBFDB;   
+    border-style: none;
 }
 input[type='checkbox']:checked:after {
     background-color: red;
@@ -323,7 +342,7 @@ table{
 .kiriKanan a{
     margin-top: -5px;
 }
-.app{
+.appTable{
     width: 100%;
 }
 .nomorPage{
@@ -335,6 +354,7 @@ table{
     font-family: nunito-sans;
     color: #646464;
     font-size:13px;
+    border: none;
 }
 @font-face {
     font-family: th;

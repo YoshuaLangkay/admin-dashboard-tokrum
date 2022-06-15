@@ -19,14 +19,13 @@
     height: 513px;
     background-color: white;
     border-radius: 16px;
-    margin-top: 6%;
+    margin-top: 16%;
     padding: 50px;
     margin-left: 5%;
 }
 
 .bodyLogin{
     padding: 100px;
-    
     background-color: #DEEAFD !important;
     background-size: 80% 110%;
     background-position: center;

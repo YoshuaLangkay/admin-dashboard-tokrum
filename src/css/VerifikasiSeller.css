@@ -35,6 +35,14 @@
     font-family: nunito-bold;
     src:url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
   } 
+  @font-face{
+    font-family: nunito-semibold;
+    src:url('../font/Nunito_Sans/NunitoSans-SemiBold.ttf');
+  } 
+  @font-face {
+    font-family: regular;
+    src: url('../font/NunitoSans_Regular.ttf');
+  }
   button {
     border: none;
     
@@ -90,10 +98,10 @@
   
   }
   .txt-judul{
-    font-size: 12px;
+    font-size: 14px !important;
     color: #8F90A6!important;
     width: 150px;
-    font-family: nunito;
+    font-family: nunito-semibold;
 
   }
   .txt-on{
@@ -131,7 +139,7 @@
   }
   .ktp{
     margin-left: 40px;
-    width: 175px;
+    width: 170px !important;
   }
   .text-berhasil{
     font-family: nunito-bold;
@@ -142,12 +150,13 @@
     font-family: nunito-bold;
     font-size: 16px;
     margin-top: 50px;
+    margin-left: 30px;
   }
   .ktp-form{
     width: 205%!important;
   }
   .icon-berhasil{
-    margin-left: 65px;
+    margin-left: 95px;
     margin-top: 20px;
   }
   .jarak{
@@ -157,10 +166,11 @@
     margin-left: -7px;
   }
   .VKpopup-berhasil .modal-content {
-    margin-top: 200px;
+    margin-top: 100px;
     position: fixed;
-    margin-left: 4%;
-    width: 18%;
+    margin-left: 0%;
+    width: 20%;
+    padding-top: 12px;
     height: 35%;
     z-index: 10000 !important;  
   }
@@ -219,7 +229,7 @@
 
   }
   .jenisKelamin{
-      width: 360px;
+      width: 355px !important;
       height: 35px;
       margin-left: 30px;
   }
@@ -240,15 +250,18 @@
     margin-top: -100px;
   }
   .VKmodal .modal-content{
-    width: 60%;
+    width: 170%;
     margin-left: -180px;
+    border-radius: 24px;
   }
-  .formModal{
+   .formModal{
+    height: 100%;
+    border-radius: 12px !important;
   }
   .form-user{
     margin-top:  -10px !important;
     margin-bottom: 10%;
-    border-radius: 24px;
+    border-radius: 24px ;
     width: 70%;
     height: 2% !important;
     opacity: 1 !important;
@@ -261,7 +274,7 @@
     margin-top: 5px;
   }
   .icon-garis{
-    z-index: 0 !important;
+    z-index: 999999 !important;
     margin-top: 40px;
     margin-left: -50px;
     height: 2px;
@@ -270,19 +283,21 @@
   .steps2, .steps3, .steps4, .steps5{
     margin-left: -60px;
   }
-  h1, h2, h3, h4, h5, h6{
+  /* h1, h2, h3, h4, h5, h6{
     font-family: nunito;
-  }
-  label{
+  } */
+  .labelVS{
     color: #646464 !important;
-    font-family: nunito;
-    font-size: 12px;
-
+    font-size: 16px;
+    font-family: regular ;
+    font-weight: 400px;
   }
-  section{
-    height: 60% !important;
+  .sec{
+    height: 80% !important;
     margin-left: -20px;
     padding-top: 2%;
+    margin-top: 20px;
+    padding: 12px;
   }
   input{
     height: 55% ;

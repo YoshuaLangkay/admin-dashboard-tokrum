@@ -44,13 +44,35 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.modalShowVo .modal-content{
+    position:fixed;
+    width: 50%;
+    margin-top: -20px;
+    height: 98%;
+    margin-left: -10%;
+    padding: 20px;
+    border-radius: 12px;
+}
 .VkananJudul{
     margin-left: 500px;
 }
-
+.tabzVo{
+    border-color: white !important;
+    margin-bottom: -30px;
+    font-family: nunito-sans;
+    font-size: 16px;
+    color: #B1B1B1;
+    border: none;
+    margin-top: 20px;
+}
+.table{    
+    margin-top: 10px;
+    width: 100%;
+}
 .form-label{
     font-size: 16px;
     font-family: reg;
+    margin-bottom: -10px;
 }
 .modal-body{
     width: 200%;

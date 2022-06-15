@@ -281,7 +281,7 @@ function VerifikasiSeller() {
       <Modal className="VKmodal" show={show} onHide={handleClose}>
         <form className="formModal">
           {formStep === 0 && (
-            <section>
+            <section className="sec">
               <h1 className="judulVerif">Verifikasi Seller</h1>
 
               <div className="tabsss d-flex">

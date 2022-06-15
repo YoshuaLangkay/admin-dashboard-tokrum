@@ -6,6 +6,8 @@ import {
   Form,
   Nav,
   Table,
+  Tab,
+  Tabs,
   Pagination,
   Modal,
   Row,
@@ -132,6 +134,33 @@ function Voucher() {
       setHideHapus(false);
     }
   }
+
+  let dataNonaktif = [
+    {
+      id: 1,
+      namaVoucher: "INFLNCR01",
+      jenisVoucher: "Potongan Harga",
+      penanggungJawab: "TokoRumahan",
+      tanggalAktif: "11 Januari 2020",
+      tanggalSelesai: "20 Januari 2020",
+    },
+    {
+      id: 2,
+      namaVoucher: "ONGKIRHEMAT",
+      jenisVoucher: "Gratis Ongkos Kirim",
+      penanggungJawab: "AnterAja",
+      tanggalAktif: "11 Januari 2020",
+      tanggalSelesai: "20 Januari 2020",
+    },
+    {
+      id: 3,
+      namaVoucher: "ONGKIRHEMAT",
+      jenisVoucher: "Gratis Ongkos Kirim",
+      penanggungJawab: "AnterAja",
+      tanggalAktif: "11 Januari 2020",
+      tanggalSelesai: "20 Januari 2020",
+    }
+  ]
 
   let data = [
     {
@@ -277,7 +306,7 @@ function Voucher() {
         <h1
           style={{ fontSize: "16px", marginTop: "50px", paddingBottom: "20px" }}
         >
-          Data berhasil terhapus
+          Tidak berhasil menghapus data
         </h1>
       </div>
       {/* modal batal hapus */}
@@ -314,13 +343,7 @@ function Voucher() {
       </div>
       {/* //modal terhapus */}
 
-      {/* <div className="modal-tambahV" hidden={hideModalTambahV}>
-              
-               */}
-
-      {/* </div> */}
-
-      <Modal className="modalShowAds" show={modalV} onHide={handleClose}>
+      <Modal className="modalShowVo " show={modalV} onHide={handleClose}>
         <h5 className="text-tambahVoucher">Tambah Voucher</h5>
 
         <Row className="mb-3 mt-3">
@@ -362,8 +385,8 @@ function Voucher() {
         </Row>
 
         <Row>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
+          <Form.Group className="mt-3 mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Deskripsi Voucher</Form.Label>
             <Form.Control
               style={{ backgroundColor: "#F7F7F7" }}
               as="textarea"
@@ -536,29 +559,6 @@ function Voucher() {
         </div>
 
         <div className="section d-flex ">
-          <Nav
-            variant="tabs"
-            defaultActiveKey="section1"
-            className="tabz d-flex"
-          >
-            <Nav.Item className="border-0">
-              <Nav.Link
-                type="checkbox"
-                className="item-tab border-bottom mb-3"
-                href="#"
-                eventKey="section1"
-                title="section1"
-              >
-                Aktif (15)
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link className="item-tab border-bottom" eventKey="link-1">
-                Nonaktif (0)
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-
           <Button
             onClick={hapusVoucher}
             hidden={hideHapus}
@@ -566,8 +566,8 @@ function Voucher() {
               backgroundColor: "white",
               width: "150px",
               height: "40px",
-              marginBottom: "-10px",
-              marginLeft: "700px",
+              marginBottom: "-50px",
+              marginLeft: "960px",
               color: "red",
               borderColor: "red",
             }}
@@ -576,7 +576,12 @@ function Voucher() {
           </Button>
         </div>
 
-        <div className="app container ">
+
+        {/* /// */}
+        <div className="appTable container ">
+        
+        <Tabs className="tabz d-flex mb-3" defaultActiveKey="aktiv" id="uncontrolled-tab-example">
+          <Tab className="item-tab" eventKey="aktiv" title="Aktif (15)">
           <table class="table table-hover ">
             <thead>
               <tr style={{ backgroundColor: "#FBFBFB" }}>
@@ -638,7 +643,7 @@ function Voucher() {
               }) {
                 return (
                   <tr id={id}>
-                    <td>
+                    <td className="MisiTable">
                       {
                         <Form.Check
                           aria-label="option 1"
@@ -686,7 +691,7 @@ function Voucher() {
                       {tanggalSelesai}
                     </td>
 
-                    <td style={{ paddingTop: "15px" }}>
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
                       <a href="#" className="Mselengkapnya">
                         Selengkapnya
                       </a>
@@ -696,7 +701,132 @@ function Voucher() {
               })}
             </tbody>
           </table>
-        </div>
+          </Tab>
+          <Tab className="item-tab" eventKey="nonaktif" title="Nonaktif (0)" >
+            {/* section 2 */}
+
+            <table class="table table-hover ">
+            <thead>
+              <tr style={{ backgroundColor: "#FBFBFB" }}>
+                <th scope="col">
+                  <Form.Check
+                    handleClick={checkAll}
+                    isChecked={isCheckAll}
+                    aria-label="option 1"
+                    onClick={checkAll}
+                    style={{ align: "center" }}
+                  />
+                </th>
+                <th
+                  className="MjudulTable"
+                  style={{ textAlign: "left" }}
+                  scope="col"
+                >
+                  Nama Voucher
+                </th>
+                <th
+                  className="MjudulTable"
+                  style={{ textAlign: "left" }}
+                  scope="col"
+                >
+                  Jenis Voucher
+                </th>
+                <th
+                  className="MjudulTable"
+                  style={{ textAlign: "left" }}
+                  scope="col"
+                >
+                  Penanggung Jawab
+                </th>
+                <th
+                  className="MjudulTable"
+                  style={{ textAlign: "left" }}
+                  scope="col"
+                >
+                  Tanggal Aktif
+                </th>
+                <th
+                  className="MjudulTable"
+                  style={{ textAlign: "left" }}
+                  scope="col"
+                >
+                  Tanggal Selesai
+                </th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody style={{ borderColor: "grey", borderStyle: "none" }}>
+              {dataNonaktif.map(function ({
+                id,
+                namaVoucher,
+                jenisVoucher,
+                penanggungJawab,
+                tanggalAktif,
+                tanggalSelesai,
+              }) {
+                return (
+                  <tr id={id}>
+                    <td className="MisiTable">
+                      {
+                        <Form.Check
+                          aria-label="option 1"
+                          className="cekbox"
+                          type="checkbox"
+                          onClick={handleClick}
+                          id={id}
+                          name="foo"
+                          style={{
+                            align: "center",
+                            paddingTop: "10px",
+                            color: "#253863",
+                          }}
+                        />
+                      }
+                    </td>
+                    <td
+                      className="MisiTable"
+                      style={{ paddingTop: "15px", textAlign: "left" }}
+                    >
+                      {namaVoucher}
+                    </td>
+                    <td
+                      className="MisiTable"
+                      style={{ paddingTop: "15px", textAlign: "left" }}
+                    >
+                      {jenisVoucher}
+                    </td>
+                    <td
+                      className="MisiTable"
+                      style={{ paddingTop: "15px", textAlign: "left" }}
+                    >
+                      {penanggungJawab}
+                    </td>
+                    <td
+                      className="MisiTable"
+                      style={{ paddingTop: "15px", textAlign: "left" }}
+                    >
+                      {tanggalAktif}
+                    </td>
+                    <td
+                      className="MisiTable"
+                      style={{ paddingTop: "15px", textAlign: "left" }}
+                    >
+                      {tanggalSelesai}
+                    </td>
+
+                    <td className="MisiTable" style={{ paddingTop: "15px" }}>
+                      <a href="#" className="Mselengkapnya">
+                        Selengkapnya
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          </Tab>
+        </Tabs>
+          </div>
       </div>
     </>
   );

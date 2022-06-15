@@ -1,0 +1,13 @@
+.modalSertifikatHalal .modal-content {
+    width: 150%;
+    margin-left: -25%;
+    padding: 12px;
+}
+.img-sh{
+    width: 90%;
+    margin-left: 40px;
+}
+.modalSertifBody{
+    background-color: #C0C2C3;
+    padding: 12px;
+}
