@@ -19,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import iconX from "../image/Icon.png";
 
 function Marketing() {
+
   const [hideHapus, setHideHapus] = useState(true);
   const [cekAll, setCekAll] = useState(false);
   const [isCheck, setIsCheck] = useState([]);
@@ -639,6 +640,7 @@ function Marketing() {
               <tr style={{ backgroundColor: "#FBFBFB" }}>
                 <th scope="col">
                   <Form.Check
+                  className="cekbox"
                     handleClick={checkAll}
                     isChecked={isCheckAll}
                     aria-label="option 1"
@@ -725,6 +727,7 @@ function Marketing() {
               <tr style={{ backgroundColor: "#FBFBFB" }}>
                 <th scope="col">
                   <Form.Check
+                  className="cekbox"
                     handleClick={checkAll}
                     isChecked={isCheckAll}
                     aria-label="option 1"
@@ -811,6 +814,7 @@ function Marketing() {
               <tr style={{ backgroundColor: "#FBFBFB" }}>
                 <th scope="col">
                   <Form.Check
+                  className="cekbox"
                     handleClick={checkAll}
                     isChecked={isCheckAll}
                     aria-label="option 1"

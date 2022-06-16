@@ -19,6 +19,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import iconX from "../image/Icon.png";
 
 function Voucher() {
+
+  let aktif = 15
+  let nonaktif = 0
+
   const [hideHapus, setHideHapus] = useState(true);
   const [cekAll, setCekAll] = useState(false);
   const [isCheck, setIsCheck] = useState([]);
@@ -585,13 +589,16 @@ function Voucher() {
           <table class="table table-hover ">
             <thead>
               <tr style={{ backgroundColor: "#FBFBFB" }}>
-                <th scope="col">
+                <th scope="col" style={{
+    
+                }}>
                   <Form.Check
+                    className="cekbox"
                     handleClick={checkAll}
                     isChecked={isCheckAll}
                     aria-label="option 1"
                     onClick={checkAll}
-                    style={{ align: "center" }}
+                    style={{ align: "center", }}
                   />
                 </th>
                 <th
@@ -702,7 +709,7 @@ function Voucher() {
             </tbody>
           </table>
           </Tab>
-          <Tab className="item-tab" eventKey="nonaktif" title="Nonaktif (0)" >
+          <Tab className="item-tab" eventKey="nonaktif" title="Nonaktif `{nonaktif}`" >
             {/* section 2 */}
 
             <table class="table table-hover ">
@@ -710,6 +717,7 @@ function Voucher() {
               <tr style={{ backgroundColor: "#FBFBFB" }}>
                 <th scope="col">
                   <Form.Check
+                  className="cekbox"
                     handleClick={checkAll}
                     isChecked={isCheckAll}
                     aria-label="option 1"
