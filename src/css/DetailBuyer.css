@@ -32,8 +32,10 @@
 	border-bottom: 2px solid #eff2f5;
 }
 .pict-buyer img {
+	width: 10vw;
 	height: 20vh;
 	border-radius: 8px;
+	object-fit: cover;
 }
 
 .box-profile-seller {
@@ -105,16 +107,7 @@
 .label-info {
 	border-bottom: 1px solid #eff2f5;
 }
-.labelRekning {
-	font-family: "Nunito700";
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 27px;
-	letter-spacing: 0em;
-	text-align: left;
-	color: #3f4254;
-	border-bottom: 1px solid #eff2f5;
-}
+
 .info {
 	height: auto;
 }
@@ -130,30 +123,8 @@
 	color: #646464;
 }
 
-.input-form input {
-	background-color: #f5f8fa;
-	width: 85%;
-	height: 5.6vh;
-	font-family: "Nunito400";
-	font-size: 12px;
-	line-height: 19px;
-	letter-spacing: 0em;
-	text-align: left;
-	border: none;
-	color: #5e6278;
-}
-.input-form textarea {
-	background-color: #f5f8fa;
-	width: 85%;
-	height: 10vh;
-	font-family: "Nunito400";
-	font-size: 12px;
-	line-height: 19px;
-	letter-spacing: 0em;
-	text-align: left;
-	border: none;
-	color: #5e6278;
-}
+
+
 .statusDana {
 	font-family: "Nunito400";
 	font-size: 12px;

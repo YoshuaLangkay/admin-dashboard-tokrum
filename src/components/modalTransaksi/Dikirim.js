@@ -3,7 +3,12 @@ import "../../css/modalTransaksi.css";
 
 function Dikirim(props) {
 	return (
-		<Modal show={props.showDikirim} onHide={props.closeDikirim}>
+		<Modal
+			show={props.showDikirim}
+			onHide={props.closeDikirim}
+			dialogClassName="dialogModalTransaksi"
+			contentClassName="contentModalTransaksi "
+		>
 			<div className="modalBayar ">
 				<Modal.Header closeButton className="tr-modal-header">
 					<Modal.Title className="ms-3 mt-3" style={{ fontSize: "36px" }}>
@@ -54,12 +59,21 @@ function Dikirim(props) {
 								</Form.Group>
 							</Col>
 						</Row>
+						{/* Catatan */}
+						<Row >
+							<Col className="mx-1">
+							<Form.Group className="mb-3">
+									<Form.Label className="tr-label-trans">Catatan Pembeli</Form.Label>
+									<Form.Control as="textarea" placeholder="lorem"  readOnly className="tr-placeholder" />
+								</Form.Group>
+							</Col>
+						</Row>
 						{/* Pengiriman */}
 						<span className="title-modal ">Pengiriman</span>
 						<Row className="mt-4 mb-3">
 							<Col className="d-flex flex-column">
 								<Form.Group className="mb-3 mt-3">
-									<Form.Label className="tr-label-trans">Metode Pembayaran</Form.Label>
+									<Form.Label className="tr-label-trans">Metode Pengiriman</Form.Label>
 									<Row className="tr-img-form w-100 ">
 										<Col className="d-flex align-items-center ">
 											<img src="https://anteraja.id/assets/img/Logo%20Anteraja-New-01.png" alt="logo" />
@@ -122,7 +136,10 @@ function Dikirim(props) {
 							<tbody className="tr-tbody-modal">
 								<tr>
 									<td>
-                                             <img src="https://assets-pergikuliner.com/cfeRp7_SZoNgDhop-thEtn-lVhw=/385x290/smart/https://assets-pergikuliner.com/uploads/image/picture/2013583/picture-1599458477.jpg" alt="produk"/>
+										<img
+											src="https://assets-pergikuliner.com/cfeRp7_SZoNgDhop-thEtn-lVhw=/385x290/smart/https://assets-pergikuliner.com/uploads/image/picture/2013583/picture-1599458477.jpg"
+											alt="produk"
+										/>
 									</td>
 									<td className="py-3">Kue Cubit</td>
 									<td className="py-3">Greentea</td>
@@ -131,7 +148,10 @@ function Dikirim(props) {
 								</tr>
 								<tr>
 									<td>
-                                             <img src="https://assets-pergikuliner.com/cfeRp7_SZoNgDhop-thEtn-lVhw=/385x290/smart/https://assets-pergikuliner.com/uploads/image/picture/2013583/picture-1599458477.jpg" alt="produk"/>
+										<img
+											src="https://assets-pergikuliner.com/cfeRp7_SZoNgDhop-thEtn-lVhw=/385x290/smart/https://assets-pergikuliner.com/uploads/image/picture/2013583/picture-1599458477.jpg"
+											alt="produk"
+										/>
 									</td>
 									<td className="py-3">Kue Cubit</td>
 									<td className="py-3">Greentea</td>

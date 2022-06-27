@@ -9,15 +9,20 @@ import DetailBuyer from "../pages/DetailBuyer";
 import DetailSeller from "../pages/DetailSeller";
 import Marketing from "../pages/Marketing";
 import Transaksi from "../pages/Transaksi";
-// import HalamanLogin from "./HalamanLogin";
+import Notifikasi from "./Notifikasi";
+import { useState } from "react";
+import PusatBantuan from "../pages/PusatBantuan";
+import PusatBantuanSeller from "../pages/PusatBantuanSeller";
+import PusatBantuanBuyer from "../pages/PusatBantuanBuyer";
 
 function SideNav() {
+	const [showNotif, setShowNotif] = useState(false)
 	return (
 		<Router>
 			<div className="dasboard d-flex ">
 				<div className="side-nav">
-					<div className="text-center icontokrum  d-flex justify-content-center align-items-center">
-						<img src={iconTokrum} alt="icon" />
+					<div className="text-center icontokrum  d-flex justify-content-center align-items-center ">
+					<Link to="/">	<img src={iconTokrum} alt="icon" /></Link>
 					</div>
 					<div className="mt-3 navbtn d-flex flex-column justify-content-center  ">
 						<div className="accordion accordion-flush" id="accordionFlushExample">
@@ -134,6 +139,7 @@ function SideNav() {
 							{/* Chat */}
 							<div className="accordion-item">
 								<h2 className="accordion-header" id="flush-headingFour">
+									<Link to="/pusatbantuan"  style={{ textDecoration: "none" }}>
 									<button
 										className="accordion-button collapsed nonV "
 										type="button"
@@ -142,9 +148,11 @@ function SideNav() {
 										aria-expanded="false"
 										aria-controls="flush-collapseFour"
 									>
-										<span className="iconChat me-2" />
-										<span className="labelIcon">Chat</span>
+										<span className="iconPusatBantuan me-2" />
+										<span className="labelIcon">Pusat Bantuan</span>
 									</button>
+									</Link>
+
 								</h2>
 								<div
 									id="flush-collapseFour"
@@ -212,31 +220,10 @@ function SideNav() {
 									data-bs-parent="#accordionFlushExample"
 								></div>
 							</div>
-							{/* Pusat */}
-							<div className="accordion-item">
-								<h2 className="accordion-header" id="flush-headingSeven">
-									<button
-										className="accordion-button collapsed nonV"
-										type="button"
-										data-bs-toggle="collapse"
-										data-bs-target="#flush-collapsSeven"
-										aria-expanded="false"
-										aria-controls="flush-collapsSeven"
-									>
-										<span className="iconBantuan me-2" />
-										<span className="labelIcon ">Pusat Bantuan</span>
-									</button>
-								</h2>
-								<div
-									id="flush-collapsSeven"
-									className="accordion-collapse collapse"
-									aria-labelledby="flush-headinSeven"
-									data-bs-parent="#accordionFlushExample"
-								></div>
-							</div>
+
 						</div>
 						<div className="boxExit  d-flex align-items-center justify-content-center  fixed-bottom ">
-							<Button className="button-keluar mb-3">Keluar</Button>
+							<Button className="button-keluar mb-3 ">Keluar</Button>
 						</div>
 					</div>
 				</div>
@@ -247,7 +234,12 @@ function SideNav() {
 					{/* <Profile /> */}
 					<div className="profile d-flex align-items-center  d-flex justify-content-end ">
 						<div className="isiProfile d-flex mb-2 me-5 ">
+
 							<div className="iconNotif">
+							<Button
+								className="btn-notif d-flex align-items-center justify-content-center p-0 ms-3"
+								onClick={() => setShowNotif(true)}
+							>
 								<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none" viewBox="0 0 50 50">
 									<rect width="50" height="50" fill="#fff" rx="25" />
 									<path
@@ -256,20 +248,24 @@ function SideNav() {
 									/>
 									<circle r="4" fill="#EA4335" transform="matrix(1 0 0 -1 32.2 34)" />
 								</svg>
+								</Button>
+								<Notifikasi showNotif={showNotif} closeNotif={() =>setShowNotif(false)} />
 							</div>
+							
 							<div className="d-flex flex-column mx-2">
 								<span className="namaProfile">Sri Annisa</span>
 								<span className="titleJob">Admin</span>
 							</div>
 							<div>
 								<img
-									src="https://img.idxchannel.com/media/700/images/idx/2022/01/13/ghazli.jpeg"
+									src="https://assets.pikiran-rakyat.com/crop/0x455:1071x1326/x/photo/2022/06/07/1990436909.jpg"
 									className="foto"
 									alt="foto"
 								/>
 							</div>
 						</div>
 					</div>
+		
 					<div className="Container-fluid isi">
 						<Routes>
 							<Route path="/" element={<Dasboard />} />
@@ -279,6 +275,9 @@ function SideNav() {
 							<Route path="/seller/detail" element={<DetailSeller />} />
 							<Route path="/marketing" element={<Marketing />} />
 							<Route path="/transaksi" element={<Transaksi />} />
+							<Route path="/pusatbantuan" element={<PusatBantuan/>}/>
+							<Route path="/pusatbantuan/seller" element={<PusatBantuanSeller/>}/>
+							<Route path="/pusatbantuan/buyer" element={<PusatBantuanBuyer/>}/>
 						</Routes>
 					</div>
 				</div>

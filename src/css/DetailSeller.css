@@ -32,8 +32,10 @@
 	border-bottom: 2px solid #eff2f5;
 }
 .pict-seller img {
+	width: 10vw;
 	height: 20vh;
 	border-radius: 8px;
+	object-fit: cover;
 }
 
 .name-profile {
@@ -168,7 +170,7 @@
 .label-info {
 	border-bottom: 1px solid #eff2f5;
 }
-p {
+.basicInfo {
 	font-family: "Nunito700";
 	font-size: 20px;
 	font-weight: 700;
@@ -193,8 +195,14 @@ p {
 	color: #646464;
 }
 
+.inputFilter::placeholder {
+	font-family: "Nunito200" !important;
+	font-size: 14px !important;
+	line-height: 21.82px !important;
+}
+
 .input-form input {
-	background-color: #f5f8fa;
+	background-color: #EEF1F9 !important;
 	width: 85%;
 	height: 5.6vh;
 	font-family: "Nunito400";
@@ -203,10 +211,10 @@ p {
 	letter-spacing: 0em;
 	text-align: left;
 	border: none;
-	color: #5e6278;
+	color: #909090 !important;
 }
 .input-form textarea {
-	background-color: #f5f8fa;
+	background-color: #EEF1F9 !important;
 	width: 85%;
 	height: 10vh;
 	font-family: "Nunito400";
@@ -331,39 +339,14 @@ p {
 }
 /* ---------------------------------------------------Profil Usaha & Pemilik  */
 
-/* ---------------------------------------------------Produk  */
+/* ---------------------------------------------------Produk & Izin  */
 .prd-hintProduk {
 	font-family: "Nunito400" !important;
 	font-size: 14px;
 	text-align: left;
 	color: #7f7f7f;
 }
-/* .tableProduk td {
-	border: none !important;
-	font-family: "Nunito400";
-	font-size: 15px;
-	line-height: 16px;
-	letter-spacing: 0.005em;
-	color: #909090;
-}
-.tableProduk th {
-	font-family: "Nunito700";
-	font-size: 16px;
-	line-height: 22px;
-	letter-spacing: 0em;
-	text-align: left;
-	color: #353535;
-}
-.tableProduk thead {
-	border-bottom: 1px solid #bfbfdb;
-}
-.tableProduk tr th {
-	height: 71px !important;
-}
-.img-tbl-produk {
-	width: 54px;
-	border-radius: 6px;
-} */
+
 .prd-tabel {
 	height: auto;
 }
@@ -393,11 +376,51 @@ p {
 	color: #646464;
 	border-bottom: none;
 }
+.izinVerif {
+	color: #31ac3d !important;
+	background-color: #d6eed8 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinTdkAda {
+	color: #fbfbfb;
+	background-color: #e6e6e6 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinBlmVerif {
+	color: #ffb72b !important;
+	background-color: #fff1d5 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+.izinDitolak {
+	color: #ff1818 !important;
+	background-color: #ffd1d1 !important;
+	font-family: "Nunito600" !important;
+	font-size: 13px !important;
+	line-height: 14px;
+	letter-spacing: 0.0075em;
+	height: 3.5vh !important;
+	width: 12vw;
+}
+
 /* ---------------------------------------------------Produk  */
 /* ---------------------------------------------------Statistik  */
 .boxProfileStatistik {
 	border-radius: 10px;
-	/* background-color: rgb(255, 255, 255); */
 	height: 100vh;
 	width: 81vw !important;
 }
@@ -553,205 +576,5 @@ p {
 .box-nama-produk {
 	width: 65%;
 }
-
-/* .bx-kiri {
-	height: auto;
-}
-.bx-kanan {
-	border-radius: 10px;
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='370' height='645' fill='none' viewBox='0 0 370 645'%3e%3cg id='Group'%3e%3cg id='Widget 20'%3e%3cg clip-path='url(%23clip0_262_16597)'%3e%3crect width='370' height='645' fill='white' rx='12'/%3e%3cg id='Cjart'%3e%3cpath id='Vector 25_____0_0_CWLXVZBGVX' fill='url(%23paint0_linear_262_16597)' stroke='%23253863' stroke-width='3' d='M40.5363 524.443L29.0768 535.936C24.1256 540.902 17.4016 543.693 10.3893 543.693C-4.18513 543.693 -16 555.508 -16 570.082V616C-16 649.137 10.8629 676 44 676H323C356.137 676 383 649.137 383 616V491.613C383 485.752 378.248 481 372.387 481C369.567 481 366.863 482.122 364.871 484.12L347.307 501.735C340.794 508.268 331.949 511.939 322.724 511.939C313.499 511.939 304.654 515.611 298.14 522.143L293.084 527.215C286.204 534.115 276.86 537.994 267.115 537.994C257.371 537.994 248.027 534.115 241.147 527.215L223.604 509.62C215.99 501.983 205.649 497.691 194.865 497.691C184.081 497.691 173.741 501.983 166.127 509.62L157.92 517.851C149.48 526.316 138.018 531.073 126.065 531.073H120.903C112.255 531.073 103.962 527.631 97.855 521.506C91.7485 515.382 83.4555 511.939 74.8068 511.939H70.6597C59.3561 511.939 48.5174 516.438 40.5363 524.443Z'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='paint0_linear_262_16597' x1='184' x2='183.057' y1='427' y2='649.496' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23999EF2'/%3e%3cstop offset='1' stop-color='%23999EF2' stop-opacity='0.4'/%3e%3c/linearGradient%3e%3cclipPath id='clip0_262_16597'%3e%3crect width='370' height='645' fill='white' rx='12'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
-	background-repeat: no-repeat;
-	height: auto;
-	background-position: 0 0;
-}
-
-.profit {
-	height: 100px;
-	border-radius: 10px;
-	background-color: white;
-}
-.statistik {
-	height: 70vh;
-	border-radius: 10px;
-	background-color: rgb(255, 255, 255);
-}
-
-.labelStatistik {
-	color: #253863;
-	font-family: "Nunito700";
-	font-size: 20px;
-	line-height: 23px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-}
-.labeljmlStatistik {
-	font-family: "Nunito400";
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 22px;
-	letter-spacing: 0.0015em;
-	color: #646464;
-}
-.btn-statistik.active {
-	background-color: #eef1f9 !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-}
-.btn-statistik {
-	color: #253863 !important;
-	font-family: "Nunito600";
-	font-size: 16px;
-	line-height: 22px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-}
-.btn-filter-terlaris.active {
-	background-color: #253863 !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-}
-.btn-filter-terlaris {
-	background-color: #bfbfdb !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-	padding: 4px 15px 3px 20px !important;
-}
-
-.labelProdukTerlaris .label {
-	font-family: "Nunito700";
-	font-size: 20px;
-	line-height: 23px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-	color: #253863;
-}
-.labelProdukTerlaris .hintLabel {
-	font-family: "Nunito400";
-	font-size: 13px;
-	line-height: 14px;
-	letter-spacing: 0.0075em;
-	text-align: left;
-	color: #7f7f7f;
-}
-
-
- */
-
-/* .boxKiri {
-	width: 45vw;
-	background-color: blue;
-	height: 600px;
-
-}
-
-.boxBawah {
-	height:600px;
-	border-radius: 10px;
-}
-
-.labelStatistik {
-	color: #253863;
-	font-family: "Nunito700";
-	font-size: 20px;
-	line-height: 23px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-}
-
-.btn-statistik.active {
-	background-color: #eef1f9 !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-}
-.btn-statistik {
-	color: #253863 !important;
-	font-family: "Nunito600";
-	font-size: 16px;
-	line-height: 22px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-}
-
-.labeljmlStatistik {
-	font-family: "Nunito400";
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 22px;
-	letter-spacing: 0.0015em;
-	color: #646464;
-}
-.boxKanan {
-	width: 30vw;
-	height: 700px;
-	border-radius: 10px;
-}
-.box-pendapatan {
-	height: 110px;
-	border-radius: 10px;
-}
-
-.lebelProfit {
-	font-family: "Nunito600";
-	font-size: 18px;
-	line-height: 23px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-	color: #253863;
-}
-.jmlProfit {
-	font-family: "Nunito600";
-	font-size: 22px;
-	line-height: 18px;
-	letter-spacing: 0em;
-	text-align: left;
-	color: #000000;
-}
-
-.labelProdukTerlaris {
-	height: 10vh;
-}
-.labelProdukTerlaris .label {
-	font-family: "Nunito700";
-	font-size: 20px;
-	line-height: 23px;
-	letter-spacing: 0.0015em;
-	text-align: left;
-	color: #253863;
-}
-.labelProdukTerlaris .hintLabel {
-	font-family: "Nunito400";
-	font-size: 13px;
-	line-height: 14px;
-	letter-spacing: 0.0075em;
-	text-align: left;
-	color: #7f7f7f;
-}
-.box-label-produk {
-	height: 12vh;
-}
-.isi-produk-terlaris {
-	height: 55vh;
-}
-.bck-chart {
-	height: 23vh;
-	left: 0;
-	bottom: 0;
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='403' height='199' fill='none' viewBox='0 0 403 199'%3e%3cg id='Group'%3e%3cg id='Cjart'%3e%3cpath id='Vector 25_____0_0_SNJITVSKFT' fill='url(%23paint0_linear_235_16162)' stroke='%23253863' stroke-width='3' d='M58.5363 45.443L47.0768 56.9364C42.1256 61.9021 35.4016 64.6931 28.3893 64.6931C13.8149 64.6931 2 76.508 2 91.0823V137C2 170.137 28.8629 197 62 197H341C374.137 197 401 170.137 401 137V12.6131C401 6.75163 396.248 2 390.387 2C387.567 2 384.863 3.12246 382.871 5.11956L365.307 22.7354C358.794 29.2679 349.949 32.9395 340.724 32.9395C331.499 32.9395 322.654 36.611 316.14 43.1435L311.084 48.2148C304.204 55.1154 294.86 58.9937 285.115 58.9937C275.371 58.9937 266.027 55.1154 259.147 48.2148L241.604 30.6197C233.99 22.9831 223.649 18.691 212.865 18.691C202.081 18.691 191.741 22.9831 184.127 30.6197L175.92 38.8509C167.48 47.3156 156.018 52.0731 144.065 52.0731H138.903C130.255 52.0731 121.962 48.6308 115.855 42.5063C109.749 36.3817 101.455 32.9395 92.8068 32.9395H88.6597C77.3561 32.9395 66.5174 37.4384 58.5363 45.443Z'/%3e%3c/g%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='paint0_linear_235_16162' x1='202' x2='201.057' y1='-52' y2='170.496' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23999EF2'/%3e%3cstop offset='1' stop-color='%23999EF2' stop-opacity='0.4'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-	background-size: cover;
-}
-
-.btn-filter-terlaris.active {
-	background-color: #253863 !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-	
-}
-.btn-filter-terlaris {
-	background-color: #bfbfdb !important;
-	color: #253863 !important;
-	border-radius: 8px !important;
-	padding: 4px 15px 3px 20px !important;
-
-} */
 
 /* ---------------------------------------------------Statistik  */

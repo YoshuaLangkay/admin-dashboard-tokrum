@@ -110,7 +110,7 @@ function Dasboard() {
 						</div>
 					</div>
 					<div className="ds-tabel mt-3 bg-white d-flex flex-column">
-						<span className="ds-label-transaksi mb-2  mx-3 mt-3">Bran Terbaru</span>
+						<span className="ds-label-transaksi mb-2  mx-3 mt-3">Brand Terbaru</span>
 						<div className="p-2">
 							<Table className="ds-tabel-content ">
 								<thead className="ds-tabel-head ">
@@ -175,7 +175,6 @@ function Dasboard() {
 					<div className="ds-isi-kanan bg-white d-flex flex-column p-3 ">
 						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
 							<span className="ds-label-produk">Produk Terlaris</span>
-							<span className="ds-hint-detail me-3">Lihat Detail</span>
 						</div>
 						<div className="mt-3">
 							{ProdukTerlaris.map((el, i) => (
@@ -199,7 +198,6 @@ function Dasboard() {
 					<div className="ds-isi-kanan bg-white d-flex flex-column pe-3 ps-3 pt-3 mt-3">
 						<div className="ds-box-label-produk  d-flex justify-content-between mt-2 pb-2 px-1">
 							<span className="ds-label-produk">Brand Terlaris</span>
-							<span className="ds-hint-detail me-3">Lihat Detail</span>
 						</div>
 						<div className="mt-3">
 							{ProdukTerlaris.map((el, i) => (

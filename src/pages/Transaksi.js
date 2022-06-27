@@ -20,7 +20,7 @@ function Transaksi() {
 			<div className="box-table-pengguna mt-3  ms-3  d-flex flex-column">
 				<div className="label-seller">
 					<div className="d-flex justify-content-between ">
-						<p className="labelPengguna ms-4 mt-4">Pengguna Seller</p>
+						<p className="labelPengguna ms-4 mt-4">Transaksi</p>
 						<div className="filterData   mx-4 mt-4 d-flex">
 							<InputGroup className="mx-3">
 								<FormControl

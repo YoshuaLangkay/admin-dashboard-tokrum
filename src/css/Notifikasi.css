@@ -1,104 +1,128 @@
-/* .containerNotif{
-    width: 450px;
-    height: 400px;
-    margin-left: 851px;
-
-}
-.kotak{
-    background-color: white;
-    height: 480px;
-    border-radius: 8px;
-
-}
-.col1{
-    width: 340px;
-    margin-left: -10px;
-}
-.tanggalNotif{
-    font-size: 13px;
-    margin-left: -20px;
-    width: 100px;
-    color: #646464;
-    margin-top: 10px;
-
-}
-.rowIsi{
-    width: 415px;
-    margin-top: 10px;
-    padding-top: 10px;
-}
-.isiNotif2{
-    width: 230px !important;
-    font-size: 13px;
-}
-.isiNotif{
-    width: 70px !important;
-    font-size: 14px;
-}
-
-.listNotif{
-    list-style-type: none;
-}
-.judulNotif{
-    font-family: Nunito-bold;
-    color: #253863;
-    font-size: 24px;
-    margin-left: 10px;
-}
-.btnNotif{
-    border-radius: 8px;
-    margin-top: -50px!important;
-    width: 430px;
-    height: 40px;
-    background-color: #253863 !important;
-    margin-bottom: 40px;
-    margin-left: 10px;
-}
-.exampleBtn{
-    margin-top: 20px;
-    margin-left: 250px;
-}
-.col2{
-    margin-left: 0px;
-    font-size: 14px;
-    margin-left: 30px;
-
-}
-.row1{
-    padding-top: 15px;
-    margin-top: 30px;
-    
-}
-.newNotif{
-    width: 74px;
-    height: 31px;
-    border-radius: 8px;
-    margin-left: 20px;
-    background-color: #FFF5DE;
-}
-.kananNotif{
-    margin-left: 30px;
-    margin-top: 5px;
-    
-}
-.new{
-    text-align: justify;
-    text-align-last: center;
-    margin-top: 4px;
-    font-size: 14px;
-    font-family: Nunito-bold;
-    color: #FF0000;
-}
-.tandai{
-    width: px;
+@font-face {
+	font-family: "Nunito600";
+	src: url("../font/NunitoSans_SemiBold.ttf");
 }
 
 @font-face {
-    font-family: "Nunito-reguler";
-    src: url('../font/Nunito_Sans/NunitoSans-Regular.ttf');
-    }
+	font-family: "Nunito200";
+	src: url("../font/NunitoSans_ExtraLight.ttf");
+}
+@font-face {
+	font-family: "Nunito400";
+	src: url("../font/NunitoSans_Regular.ttf");
+}
+@font-face {
+	font-family: "Nunito900";
+	src: url("../font/NunitoSans_Black.ttf");
+}
+@font-face {
+	font-family: "Nunito700";
+	src: url("../font/NunitoSans_Bold.ttf");
+}
 
-    @font-face {
-        font-family: "Nunito-bold";
-        src: url('../font/Nunito_Sans/NunitoSans-Bold.ttf');
-        } */
+.backModalNotif {
+	opacity: 1;
+	background-color: transparent;
+    width: auto;
+    
+}
+.dialogModal{
+    width: auto;
+    position: fixed;
+    height: auto;
+    margin-left:65% !important;
+    margin-top: 10vh !important;
+
+}
+.contentNotif {
+    width: auto;
+	border-radius: 6px !important;
+	border: none !important;
+  
+}
+
+.label-notif {
+	font-family: "Nunito700";
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: 0em;
+	color: #253863;
+	/* width: 47%; */
+}
+.label-tandai-notif {
+	/* width: 35%; */
+	font-family: "Nunito400";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0em;
+	color: #5b96f5;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.lebel-new-notif {
+	/* width: 17%; */
+}
+.jml-notif {
+    font-family: "Nunito400";
+    color: #ff0000;
+	line-height: 19px;
+	letter-spacing: 0em;
+	width: 7vw;
+	background-color: #ffcccc;
+	border-radius: 8px;
+}
+.isiModalNotif {
+	width: 100%;
+}
+.isi-notif {
+	width: 60%;
+	font-family: "Nunito400";
+	font-size: 15px;
+	line-height: 22px;
+	letter-spacing: 0em;
+	color: #858b97;
+}
+.tgl-notif {
+	height: 35%;
+	font-family: "Nunito400";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 19px;
+	letter-spacing: 0em;
+	color: #858b97;
+}
+.btn-show-notif {
+    width: 90%;
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}
+.btn-show-notif:hover {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}
+.btn-show-notif:focus {
+	font-family: "Nunito400";
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: white;
+	background-color: #253863;
+    border: none;
+}

@@ -364,12 +364,12 @@ function Statistik() {
 							</div>
 
 							{/* Tak Laris */}
-							<div
+							{/* <div
 								className="tab-pane fade"
 								id="pills-produkTakTerlaris"
 								role="tabpanel"
 								aria-labelledby="pills-produkTakTerlaris"
-							>
+							>	
 								<div className="d-flex flex-column labelProdukTerlaris">
 									<span className="ms-2 label">Produk Tak Laris</span>
 									<span className="ms-2 hintLabel">7 Produk Terlaris Minggu ini</span>
@@ -478,10 +478,10 @@ function Statistik() {
 										</li>
 									</ul>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
-					<div className="btn-lap-produk   ">
+					{/* <div className="btn-lap-produk   ">
 						<ul className="nav nav-pills d-flex mt-3 " id="pills-tab" role="tablist">
 							<li className="nav-item" role="presentation">
 								<button
@@ -508,7 +508,7 @@ function Statistik() {
 								/>
 							</li>
 						</ul>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</Container>

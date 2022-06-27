@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Button, Container,Form } from "react-bootstrap";
+import { Row, Col, Button, Container, Form } from "react-bootstrap";
 import "../../css/DetailSeller.css";
 
 function ProfilUsaha() {
@@ -8,7 +8,7 @@ function ProfilUsaha() {
 			<Container fluid className="boxProfileUsaha ">
 				<div>
 					<div className=" pt-3 label-info d-flex align-items-center py-2">
-						<p className="ms-3">Basic Info</p>
+						<p className="basicInfo ms-3">Basic Info</p>
 					</div>
 					<div className="info mx-3 mt-4 pb-5">
 						<Row>
@@ -53,7 +53,7 @@ function ProfilUsaha() {
 						</Row>
 						<div className="d-flex boxLabelRekening pb-3">
 							<span>
-								<p className="labelRekning me-2">Rekening Dana</p>
+								<p className="labelRekning me-2">Rekening Usaha</p>
 							</span>
 							<span>
 								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@ function ProfilUsaha() {
 			</Container>
 			<Container fluid className="boxProfileUsaha mt-3">
 				<div className=" pt-3 label-info d-flex align-items-center py-3">
-					<p className="ms-3">Basic Info</p>
+					<p className="basicInfo ms-3">Social Media</p>
 				</div>
 				<div className="box-info-sosmed mx-3 mt-4 pb-3">
 					<Row className="infoSosmed pb-4">
@@ -144,9 +144,7 @@ function ProfilUsaha() {
 						</Col>
 						<Col>
 							<div className="website  d-flex align-items-end justify-content-end">
-								<a href="http">
-									www.redbull.com
-								</a>
+								<a href="http">www.redbull.com</a>
 							</div>
 						</Col>
 					</Row>
@@ -193,9 +191,7 @@ function ProfilUsaha() {
 						</Col>
 						<Col>
 							<div className="website  d-flex align-items-end justify-content-end">
-								<a href="http">
-									@redbull
-								</a>
+								<a href="http">@redbull</a>
 							</div>
 						</Col>
 					</Row>
@@ -236,9 +232,7 @@ function ProfilUsaha() {
 						</Col>
 						<Col>
 							<div className="website  d-flex align-items-end justify-content-end">
-								<a href="http">
-									@YutubeRedbull
-								</a>
+								<a href="http">@YutubeRedbull</a>
 							</div>
 						</Col>
 					</Row>
@@ -279,9 +273,7 @@ function ProfilUsaha() {
 						</Col>
 						<Col>
 							<div className="website  d-flex align-items-end justify-content-end">
-								<a href="http">
-									@FaceBookRedbull
-								</a>
+								<a href="http">@FaceBookRedbull</a>
 							</div>
 						</Col>
 					</Row>
@@ -333,9 +325,7 @@ function ProfilUsaha() {
 						</Col>
 						<Col>
 							<div className="website  d-flex align-items-end justify-content-end">
-								<a href="http">
-									@Redbull
-								</a>
+								<a href="http">@Redbull</a>
 							</div>
 						</Col>
 					</Row>
@@ -368,11 +358,11 @@ function ProfilUsaha() {
 					</div>
 				</div>
 				<div className="mt-3 ms-3 formCheck">
-					<Form.Group className="" >
-						<Form.Check type="checkbox" label="Konfirmasi Nonaktif Akun"/>
+					<Form.Group className="">
+						<Form.Check type="checkbox" label="Konfirmasi Nonaktif Akun" />
 					</Form.Group>
 				</div>
-                    <div className="d-flex mt-4 ms-3 p-2 justify-content-end btn-nonAktiv" style={{width:"74vw"}}>
+				<div className="d-flex mt-4 ms-3 p-2 justify-content-end btn-nonAktiv" style={{ width: "74vw" }}>
 					<Button>Nonaktifkan Akun</Button>
 				</div>
 			</Container>

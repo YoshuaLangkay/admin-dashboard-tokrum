@@ -1,12 +1,12 @@
 import React from "react";
-import { Row, Col, Button, Container, Form } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 
 function ProfilPemilik() {
 	return (
 		<Container fluid className="boxProfileUsaha ">
 			<div>
 				<div className=" pt-3 label-info d-flex align-items-center py-2">
-					<p className="ms-3">Basic Info</p>
+					<p className="basicInfo ms-3">Basic Info</p>
 				</div>
 				<div className="info mx-3 mt-4 pb-5">
 					<Row>
@@ -49,7 +49,6 @@ function ProfilPemilik() {
 							<input type="text" className="form-control" placeholder="contactus@redbull.com" />
 						</Col>
 					</Row>
-					
 				</div>
 				<div className="box-btn-ubah d-flex justify-content-end align-items-center ms-3">
 					<span className="me-5 pe-5">

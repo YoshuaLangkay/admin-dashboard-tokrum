@@ -25,10 +25,10 @@
 	background-color: rgb(255, 255, 255);
 	border-radius: 20px;
 }
-.modal-dialog {
+.dialogModalTransaksi{
 	margin-left: 20vw !important;
 }
-.modal-content {
+.contentModalTransaksi {
 	border-radius: 20px;
 }
 
