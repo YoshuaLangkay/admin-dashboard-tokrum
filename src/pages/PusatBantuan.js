@@ -5,7 +5,6 @@ import BantuanAktif from "../components/pusatBantuan/BantuanAktif";
 import BantuanSelesai from "../components/pusatBantuan/BantuanSelesai";
 import PermintaanBantuan from "../components/pusatBantuan/PermintaanBantuan";
 import "../css/pusatBantuan.css";
-import maskot from "../image/maskot.png"
 
 function PusatBantuan() {
 	const tableBantuan = [
